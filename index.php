@@ -12,7 +12,6 @@
 </head>
 
 <body id="top">
-    <h1>テスト</h1>
     <div id="container">
 
         <header class="header">
