@@ -13,8 +13,7 @@
 
 <body id="top">
     <div id="container">
-<h1>hellow
-</h1>
+
         <header class="header">
             <h1 class="header__logo"><a href="#"><img src="image/camplogo.svg" alt="foreach campground"></a></h1>
             <nav id="g-nav">
