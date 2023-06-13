@@ -8,7 +8,14 @@
     <title>news</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+    
+    
+  </style>
+
 </head>
 
 <body id="news">
@@ -41,7 +48,7 @@
                             <p class="recently">RECENTLY&nbsp;NEWS</p>
                         </h1>
                     </div>
-                    <ul class="news__item">
+                    <!-- <ul class="slideshow">
                         <li><a href="#">
                                 <figure class="img"><img src="image/rantan.jpg" alt="ランタン"></figure>
                             </a></li>
@@ -55,7 +62,108 @@
                                 <figure class="img"><img src="image/tent.jpg" alt="テント"></figure>
                             </a></li>
                     </ul>
-                </section>
+                </section> -->
+                <section class="regular slider">
+                <div>
+                <a href="shop.php">
+                <img src="image/rantan.jpg" alt="ランタン">
+                </a>
+                </div>
+                <div>
+                <a href="shop.php">
+                <img src="image/cup.jpg" alt="マグカップ">
+                </a>
+                </div>
+                <div>
+                <a href="shop.php">
+                <img class="img"><img src="image/fire.jpg" alt="焚き火">
+                </a>
+                </div>
+                <div>
+                <a href="shop.php">
+                <img src="image/tent.jpg" alt="テント">
+                </a>
+                </div>
+                <div>
+                <a href="shop.php">
+                <img src="image/tent.jpg" alt="テント">
+                </a>
+                </div>
+                <div>
+                <a href="shop.php">
+                <img src="image/tent.jpg" alt="テント">
+                </a>
+                </div>
+            </section>
+    <div>
+      <!-- this slide should inherit the sizes attr from the parent slider -->
+      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".vertical-center-4").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+      $(".vertical-center-3").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".vertical-center-2").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+      $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      $(".vertical").slick({
+        dots: true,
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+</script>
+
+
+               
             </article>
         </main>
 
@@ -92,6 +200,9 @@
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
         </footer>
+        <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
