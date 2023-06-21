@@ -569,17 +569,16 @@ reserve
     background-color: #45a049;
   }
 
-かたおか
+/*--------------------------------
+facility
+----------------------------------*/
 
-
-testtestetst
-
-
-taniyama
-
-takase
- 
-
-ass
-
-
+#facility #mv {
+    background-image: url(../image/tent1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    margin-bottom: 150px;
+}
