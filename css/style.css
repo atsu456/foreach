@@ -432,6 +432,142 @@ news
     width: auto;
     height: auto;
 }
+/*--------------------------------
+reserve
+----------------------------------*/
+#reserve #mv {
+    background-image: url(../image/log-home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    margin-bottom: 150px;
+}
+#reserve body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #reserve h1 {
+    text-align: center;
+  }
+  #reserve .section_reserve {
+    display: flex;
+  }
+  #reserve .section_left{
+    width: 60%;
+  }
+  #reserve .section_right{
+    width: 40%;
+  }
+  #reserve .campsite_article {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  #reserve .campsite_article h2 {
+    margin-top: 0;
+  }
+ 
+  #reserve .campsite_article p {
+    margin: 0;
+    font-size: 18px;
+  }
+  #reserve .campsite_article .campsite_top p{
+    font-size: 22px;
+  }
+
+  #reserve .campsite_article .site_img {
+    width: 100%;
+    object-fit: cover;
+}
+#reserve .text{
+    margin: 20px 0 ;
+}
+#reserve .button_reserve a {    /* 購入ボタン */
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+	border: solid 1px #313131;
+}
+#reserve .button_reserve a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+#reserve .button_reserve a:hover {
+  background: #009456;
+  color: #FFF;
+}
+#reserve .button_reserve a:hover:after {
+  right: 1.4rem;
+}
+
+  
+  #reserve_form h1 {
+    color: #333333;
+  }
+  
+  #reserve_form form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #reserve_form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  #reserve_form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  #reserve_form input[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #reserve_form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
 
 
 
