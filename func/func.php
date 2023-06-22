@@ -79,3 +79,53 @@ function calc_totals()
     $_SESSION['cart']['total_quantity'] += $item['quantity'];
   }
 }
+
+//カレンダー
+
+// タイムゾーンを日本に変更
+date_default_timezone_set('Asia/Tokyo');
+// 曜日表示用の配列
+$weekday = array('日', '月', '火', '水', '木', '金', '土',);
+// $weekday = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat',);
+
+// 今日のオブジェクト
+$objRefDate = new DateTime();
+
+$thisYear = $objRefDate->format('Y');
+$thisMonth = $objRefDate->format('n');
+$thisDate = $objRefDate->format('j');
+// 当月の総日数
+$thisFullDays = $objRefDate->format('t');
+// 初日の曜日
+$objFirstDateTime = new DateTime("$thisYear-$thisMonth-1");
+$thisFirstWeekDay = $objFirstDateTime->format('w');
+// 最終日の曜日
+$objLastDateTime = new DateTime("$thisYear-$thisMonth-$thisFullDays");
+$thisLastWeekDay = $objLastDateTime->format('w');
+// 前月のオブジェクトを生成
+$objPrevMonth = new DateTime("$thisYear-$thisMonth-1 -1 Months");
+// 前月の総日数
+$prevFullDays = $objPrevMonth->format('t');
+// 次月のオブジェクトを生成
+$objNextMonth = new DateTime("$thisYear-$thisMonth-1 +1 Months");
+// 次月の総日数
+$nextFullDays = $objNextMonth->format('t');
+
+
+//今月カレンダー表示
+$result_calendar = [];
+//前月の端数
+for($i = $nextFullDays-($thisFirstWeekDay-1); $i <= $prevFullDays; $i++){
+    // print $i . '日, ';
+    $result_calendar[] = $i;
+}
+//今月の日にち
+for($k = 1; $k <= $thisFullDays; $k++){
+    // print $k . '日, ';
+    $result_calendar[] = $k;
+}
+//次月の端数
+for($j = 1; $j <= (6-$thisLastWeekDay); $j++){
+    // print $j . '日, ';
+    $result_calendar[] = $j;
+}
