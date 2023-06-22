@@ -444,11 +444,6 @@ reserve
     position: relative;
     margin-bottom: 150px;
 }
-#reserve body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
 
   #reserve h1 {
     text-align: center;
