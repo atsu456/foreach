@@ -83,7 +83,7 @@ a {
 ロゴ
 ----------------------------------*/
 
-.header__logo a img{
+.header__logo a img {
     height: 100px;
     margin: 15px 0;
 }
@@ -142,7 +142,7 @@ a {
     color: #9d9d9d;
 }
 
-.ft__logo a img{
+.ft__logo a img {
     width: 250px;
     height: 100px;
     margin: 20px;
@@ -318,7 +318,8 @@ facility shop access 共通
 facility　access　共通
 ----------------------------------*/
 
-#facility, #access {
+#facility,
+#access {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -336,15 +337,17 @@ facility　access　共通
     display: flex;
     justify-content: end;
     align-items: center;
-    }
+}
+
 .title-border-left:before {
     border-top: 0.5px solid;
     content: "";
     flex-grow: 0.5;
-    }
+}
+
 .title-border-left:before {
     margin-right: 1rem;
-    }
+}
 
 /*--------------------------------
 ストア(shop)
@@ -383,6 +386,7 @@ shop
     position: relative;
     margin-bottom: 150px;
 }
+
 /* #arrivals{
     display: flex;
     flex-direction: column;
@@ -397,9 +401,10 @@ shop
 
 } */
 
-#shop .contents{
+#shop .contents {
     display: flex;
 }
+
 #shop .contents:nth-child(odd) {
     flex-direction: row-reverse;
 }
@@ -417,21 +422,25 @@ news
     position: relative;
     margin-bottom: 150px;
 }
+
 #news .news__item {
     display: flex;
     width: 1166px;
     justify-content: space-between;
 }
-.recently{
+
+.recently {
     text-align: center;
     margin: 64px 0;
 }
-#textnews{
+
+#textnews {
     text-align: center;
     background: var(--main-color);
     width: auto;
     height: auto;
 }
+
 /*--------------------------------
 reserve
 ----------------------------------*/
@@ -445,45 +454,53 @@ reserve
     margin-bottom: 150px;
 }
 
-  #reserve h1 {
+#reserve h1 {
     text-align: center;
-  }
-  #reserve .section_reserve {
+}
+
+#reserve .section_reserve {
     display: flex;
-  }
-  #reserve .section_left{
+}
+
+#reserve .section_left {
     width: 60%;
-  }
-  #reserve .section_right{
+}
+
+#reserve .section_right {
     width: 40%;
-  }
-  #reserve .campsite_article {
+}
+
+#reserve .campsite_article {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
     padding: 10px;
-  }
+}
 
-  #reserve .campsite_article h2 {
+#reserve .campsite_article h2 {
     margin-top: 0;
-  }
- 
-  #reserve .campsite_article p {
+}
+
+#reserve .campsite_article p {
     margin: 0;
     font-size: 18px;
-  }
-  #reserve .campsite_article .campsite_top p{
-    font-size: 22px;
-  }
+}
 
-  #reserve .campsite_article .site_img {
+#reserve .campsite_article .campsite_top p {
+    font-size: 22px;
+}
+
+#reserve .campsite_article .site_img {
     width: 100%;
     object-fit: cover;
 }
-#reserve .text{
-    margin: 20px 0 ;
+
+#reserve .text {
+    margin: 20px 0;
 }
-#reserve .button_reserve a {    /* 購入ボタン */
+
+#reserve .button_reserve a {
+    /* 購入ボタン */
     background: #eee;
     border-radius: 3px;
     position: relative;
@@ -496,73 +513,126 @@ reserve
     color: #313131;
     transition: 0.3s ease-in-out;
     font-weight: 500;
-	border: solid 1px #313131;
-}
-#reserve .button_reserve a:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  right: 2rem;
-  font-size: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: right 0.3s;
-  width: 6px;
-  height: 6px;
-  border-top: solid 2px currentColor;
-  border-right: solid 2px currentColor;
-  transform: translateY(-50%) rotate(45deg);
-}
-#reserve .button_reserve a:hover {
-  background: #009456;
-  color: #FFF;
-}
-#reserve .button_reserve a:hover:after {
-  right: 1.4rem;
+    border: solid 1px #313131;
 }
 
-  
-  #reserve_form h1 {
+#reserve .button_reserve a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 2rem;
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#reserve .button_reserve a:hover {
+    background: #009456;
+    color: #FFF;
+}
+
+#reserve .button_reserve a:hover:after {
+    right: 1.4rem;
+}
+
+
+#reserve_form h1 {
     color: #333333;
-  }
-  
-  #reserve_form form {
+}
+
+#reserve_form form {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #reserve_form label {
+}
+
+#reserve_form label {
     display: block;
     margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  #reserve_form textarea {
+}
+
+input[type="text"],
+input[type="email"],
+#reserve_form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 10px;
-  }
-  
-  #reserve_form input[type="submit"] {
+}
+
+#reserve_form input[type="submit"] {
     background-color: #4caf50;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  #reserve_form input[type="submit"]:hover {
+}
+
+#reserve_form input[type="submit"]:hover {
     background-color: #45a049;
-  }
+}
+
+.calendar-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.prev-btn,
+.next-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.calendar td {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.calendar td:hover {
+    background-color: #ddd;
+}
 
 /*--------------------------------
 facility
