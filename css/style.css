@@ -53,9 +53,11 @@ a {
 }
 
 /* 全ページ共通 -----------------------------------------------------------*/
+
 /*--------------------------------
 コンテナ
 ----------------------------------*/
+
 #container {
     max-width: 100%;
     margin: 0 auto;
@@ -64,6 +66,7 @@ a {
 /*--------------------------------
 ヘッダー
 ----------------------------------*/
+
 .header {
     display: flex;
     width: 100%;
@@ -73,12 +76,14 @@ a {
     top: 0;
     z-index: 10;
     justify-content: space-between;
+
 }
 
 /*--------------------------------
 ロゴ
 ----------------------------------*/
-.header__logo a img {
+
+.header__logo a img{
     height: 100px;
     margin: 15px 0;
 }
@@ -86,6 +91,7 @@ a {
 /*--------------------------------
 グロナビ
 ----------------------------------*/
+
 #g-nav {
     width: 300px;
 }
@@ -114,6 +120,7 @@ a {
 /*--------------------------------
 フッター
 ----------------------------------*/
+
 .footer {
     height: 450px;
     padding: 20px 80px;
@@ -135,7 +142,7 @@ a {
     color: #9d9d9d;
 }
 
-.ft__logo a img {
+.ft__logo a img{
     width: 250px;
     height: 100px;
     margin: 20px;
@@ -170,10 +177,13 @@ a {
 }
 
 /* 全ページ共通ここまで ---------------------------------------------------*/
+
 /* TOPページページここから ------------------------------------------------*/
+
 /*--------------------------------
 セクション
 ----------------------------------*/
+
 section {
     margin-bottom: 3rem;
 }
@@ -181,6 +191,7 @@ section {
 /*--------------------------------
 メインビジュアル(mv)
 ----------------------------------*/
+
 #top #mv {
     background-image: url(../image/hugues-de-buyer-mimeure-hGuGRayJrv0-unsplash.jpg);
     background-position: center;
@@ -211,6 +222,7 @@ section {
 /*--------------------------------
 コンテンツ(contents)
 ----------------------------------*/
+
 .contents {
     width: 1166px;
     margin-left: auto;
@@ -221,6 +233,7 @@ section {
 /*--------------------------------
 お知らせ(news)
 ----------------------------------*/
+
 #news01 {
     display: flex;
 }
@@ -271,6 +284,7 @@ a.btn:hover {
 /*--------------------------------
 facility shop access 共通
 ----------------------------------*/
+
 .page_description {
     width: 424px;
     height: 576px;
@@ -303,8 +317,8 @@ facility shop access 共通
 /*--------------------------------
 facility　access　共通
 ----------------------------------*/
-#facility02,
-#access04 {
+
+#facility, #access {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -322,22 +336,21 @@ facility　access　共通
     display: flex;
     justify-content: end;
     align-items: center;
-}
-
+    }
 .title-border-left:before {
     border-top: 0.5px solid;
     content: "";
     flex-grow: 0.5;
-}
-
+    }
 .title-border-left:before {
     margin-right: 1rem;
-}
+    }
 
 /*--------------------------------
 ストア(shop)
 ----------------------------------*/
-#onlinestore03 {
+
+#onlinestore {
     display: flex;
 }
 
@@ -349,36 +362,13 @@ facility　access　共通
     height: 200px;
     position: relative;
     overflow: hidden;
-}
+  }
 .slider img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   } */
-.slider {
-    width: 70%;
-    margin: 100px auto;
-}
-
-.slick-slide {
-    margin: 0px 20px;
-}
-
-.slick-slide img {
-    width: 100%;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    color: black;
-}
-
-
-.slick-slide {
-    transition: all ease-in-out .3s;
-}
-
 /* sliderここまで ------------------------------------------------*/
 
 /*--------------------------------
@@ -393,7 +383,6 @@ shop
     position: relative;
     margin-bottom: 150px;
 }
-
 /* #arrivals{
     display: flex;
     flex-direction: column;
@@ -405,14 +394,16 @@ shop
 /* #shop .arrivals__item {
     display: flex;
     justify-content: space-between;
+
 } */
-#shop .contents {
+
+#shop .contents{
     display: flex;
 }
-
 #shop .contents:nth-child(odd) {
     flex-direction: row-reverse;
 }
+
 
 /*--------------------------------
 news
@@ -426,29 +417,236 @@ news
     position: relative;
     margin-bottom: 150px;
 }
-
 #news .news__item {
     display: flex;
     width: 1166px;
     justify-content: space-between;
 }
-
-.recently {
+.recently{
     text-align: center;
     margin: 64px 0;
 }
-
-#textnews {
+#textnews{
     text-align: center;
     background: var(--main-color);
     width: auto;
     height: auto;
 }
-
-#news .contents {
-    margin-bottom: 100px;
+/*--------------------------------
+reserve
+----------------------------------*/
+#reserve #mv {
+    background-image: url(../image/log-home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    margin-bottom: 150px;
 }
 
+#reserve h1 {
+    text-align: center;
+}
+
+#reserve .section_reserve {
+    display: flex;
+    gap: 20px;
+}
+
+#reserve .section_left {
+    width: 60%;
+}
+
+#reserve .section_right {
+    width: 40%;
+}
+
+#reserve .campsite_article {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#reserve .campsite_article h2 {
+    margin-top: 0;
+}
+
+#reserve .campsite_article p {
+    margin: 0;
+    font-size: 18px;
+}
+
+#reserve .campsite_article .campsite_top p {
+    font-size: 22px;
+}
+
+#reserve .campsite_article .site_img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#reserve .text {
+    margin: 20px 0;
+}
+
+#reserve .button_reserve a {
+    /* 購入ボタン */
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    border: solid 1px #313131;
+}
+
+#reserve .button_reserve a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 2rem;
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#reserve .button_reserve a:hover {
+    background: #009456;
+    color: #FFF;
+}
+
+#reserve .button_reserve a:hover:after {
+    right: 1.4rem;
+}
+
+
+#reserve_form h1 {
+    color: #333333;
+}
+
+#reserve_form form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reserve_form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+#reserve_form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#reserve_form input[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reserve_form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.calendar-section {
+    color: var(--black);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.calendar-section .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-section .header h1 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.calendar-section .prev-btn,
+.calendar-section .next-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.calendar-section .calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.calendar td {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.calendar .day:hover {
+    background-color: #ddd;
+}
+/* reserve_form */
+#reserve_form h1{
+    text-align: center;
+}
+#reserve_form form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    color: black; /* 文字の色を黒に設定 */
+    width: 80%; /* フォームの幅を縮小する */
+    max-width: 800px; /* フォームの最大横幅を800pxに制限する */
+}
+
+#reserve_form label {
+    margin: 10px 0 5px;
+}
+
+#reserve_form input, select, textarea, button {
+    padding: 5px;
+    width: 100%; /* 入力フィールドをフォームの幅に合わせる */
+}
 /*--------------------------------
 facility
 ----------------------------------*/
@@ -462,21 +660,40 @@ facility
     position: relative;
     margin-bottom: 150px;
 }
-
-#facility .mv__text {
-    text-align: right;
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    color: var(--white);
+/*--------------------------------
+news
+----------------------------------*/
+#news #mv {
+    background-image: url(../image/news.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    margin-bottom: 150px;
 }
-
-#facility .mv__copy {
-    font-size: 20px;
-    font-weight: normal;
+#news .news__item {
+    display: flex;
+    width: 1166px;
+    justify-content: space-between;
 }
-
-#facility .mv__copy {
-    font-size: 20px;
-    font-weight: normal;
+.recently{
+    text-align: center;
+    margin: 64px 0;
+}
+#textnews{
+    text-align: center;
+    background: var(--main-color);
+    width: auto;
+    height: auto;
+}
+#news .contents{
+    margin-bottom: 100px;
+}
+/*--------------------------------
+news detail
+----------------------------------*/
+.news_detail p{
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }

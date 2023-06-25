@@ -18,8 +18,8 @@
             <h1 class="header__logo"><a href="#"><img src="image/camplogo.svg" alt="foreach campground"></a></h1>
             <nav id="g-nav">
                 <ul class="nav">
-                    <li class="g-nav__item"><a href="#">予約</a></li>
-                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="reserve.php">予約</a></li>
+                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
@@ -41,7 +41,7 @@
                             <p class="title-border-right">NEWS</p>
                         </h2>
                         <p>イベント情報など<br>最新の情報をお届けいたします。</p>
-                        <a href="#" class="btn">READ MORE</a>
+                        <a href="news.php" class="btn">READ MORE</a>
                     </div>
                     <ul class="news__item">
                         <li><a href="#">
@@ -75,7 +75,7 @@
                             <p class="title-border-right">STORE</p>
                         </h2>
                         <p>キャンプギア、アパレル用品の購入はこちらから！<br>限定商品も取り扱っていますので<br>是非ご覧ください。</p>
-                        <a href="#" class="btn">READ MORE</a>
+                        <a href="shop.php" class="btn">READ MORE</a>
                         </div>
                         <figure class="contents_img"><img src="image/mug.jpg" alt="マグカップ"></figure>
                 </section>
@@ -106,13 +106,13 @@
         </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="#">アクセス</a></li>
-                <li class="ft_links_li"><a href="#">お知らせ</a></li>
-                <li class="ft_links_li"><a href="#">施設紹介</a></li>
-                <li class="ft_links_li"><a href="#">予約</a></li>
-                <li class="ft_links_li"><a href="#">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
+                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
+                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
+                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
+                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
