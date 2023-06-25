@@ -71,113 +71,85 @@ require_once 'func/func.php';
             <div class="text">
               <p>区画電源オートサイト(電源あり)は、キャンプ場内に設けられたエリアで、テントやキャンピングカーを自由に設置することができます。このエリアには電源があり、電気を利用することができます。電源を利用することで、照明や冷蔵庫、電気ストーブなどの電化製品を使うことができます。電源あり区画フリーサイトは、キャンプ場での快適な滞在を求める人々におすすめのスペースです。</p>
             </div>
-
-
             <div class="button_reserve">
-
-
               <a href="reserve_form.php">予約手続きへ進む</a>
-
-
             </div>
-
-
           </div>
-
-
-
-
-
-
           <!-- Plan 3: ソロキャンプサイト(電源なし) -->
 
-
           <div class="campsite_article">
-
-
             <div class="campsite_top">
-
-
               <img src="image/solosite.jpg" alt="" class="site_img">
               <div>
-
-
                 <h2>ソロキャンプサイト(電源なし)</h2>
-
-
               </div>
-
-
               <p>¥4,400/拍(税込み)</p>
-
-
               <p><i class="fas fa-users"></i> 1~6名</p>
-
-
               <p><i class="fas fa-car"></i> 車１台</p>
               <p><i class="fas fa-campground"></i> テント・タープ１張りまで</p>
             </div>
-
-
             <div class="text">
-
-
               <p>ソロキャンプサイト（電源なし）は、一人で利用することができるキャンプ場です。このキャンプ場では、電源が提供されていないため、自然の中でシンプルな生活を楽しむことができます。テントを張り、寝袋で寝泊まりし、焚火を囲んで食事をしたり、アウトドアアクティビティを楽しむことができます。電源がないため、携帯電話や電化製品の利用は制限されますが、自然の中での静寂な時間を過ごしたい方におすすめのスペースです。</p>
             </div>
-
-
             <div class="button_reserve">
-
-
               <a href="reserve_form.php">予約手続きへ進む</a>
-
-
             </div>
-
-
           </div>
         </div>
-
-
-
-
-
 
         <div class="section_right">
 
+        <h1>空室カレンダー</h1>
 
           <div class="calendar-section">
+            
             <h1><?= $thisYear . '年 / ' . $thisMonth . '月' ?></h1>
-            <button class="next_btn"><img src="images/next.svg" alt=""></button>
+            
             <table class="calendar">
-              <tr>
-                <th>日</th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-                <th>土</th>
-              </tr>
-              <?php foreach (array_chunk($result_calendar, 7) as $week) : ?>
-                <tr class="day">
-                  <?php foreach ($week as $day) : ?>
-                    <?php if ($day !== '') : ?>
-                      <td><?= $day ?></td>
-                    <?php else : ?>
-                      <td></td>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                </tr>
-              <?php endforeach; ?>
+            <tr>
+          <!-- カレンダーの曜日の表示 -->
+          <?php foreach ($weekday as $day) : ?>
+            <th><?= $day; ?></th>
+          <?php endforeach; ?>
+        </tr>
+        <tr>
+          <!-- 1日の前の空欄を表示 -->
+          <?php for ($emptyCellCount = 0; $emptyCellCount < $thisFirstWeekDay; $emptyCellCount++) : ?>
+            <td></td>
+          <?php endfor; ?>
+          <!--　カレンダーの日付を表示 -->
+          <?php for ($dateCount = 1; $dateCount <= $thisFullDays; $dateCount++) : ?>
+            <?php $d = $objToday->format('j') ?>
+            <?php if($dateCount >= $d): ?>
+            <td class="day <?= "$thisYear-$thisMonth-$dateCount" == $objToday->format('Y-m-d') ? 'today' : ''; ?>" onclick="showSelectedDate('<?= "$thisYear-$thisMonth-$dateCount" ?>')">
+            <?= $dateCount; ?><br>
+            〇
+            </td>
+            <?php else: ?>
+              <td  <?= "$thisYear-$thisMonth-$dateCount" == $objToday->format('Y-m-d') ? 'today' : ''; ?>" >
+            <?= $dateCount; ?><br>
+            -
+            </td>
+            <?php endif; ?>
+            </div>
+            <?php if (($dateCount + $thisFirstWeekDay) % 7 == 0) : ?>
+        </tr>
+        <?php if ($dateCount != $thisFullDays || $thisLastWeekDay != 6) : ?>
+          <tr>
+          <?php endif; ?>
+        <?php endif; ?>
+      <?php endfor; ?>
+      <!-- 最終日の後ろの空欄を表示 -->
+      <?php for ($emptyCellCount = 1; $emptyCellCount < (7 - $thisLastWeekDay); $emptyCellCount++) : ?>
+        <td></td>
+      <?php endfor; ?>
             </table>
           </div>
-
-
         </div>
-      </div>
+    </div>
     </article>
   </main>
+  
   <footer class="footer">
     <div class="ft">
       <ul class="ft__ul">
@@ -211,6 +183,25 @@ require_once 'func/func.php';
     </div>
     <div class="ft_copyright">©2023 foreach campground</div>
   </footer>
+  <script>
+    function showSelectedDate(date) {
+//        document.getElementById('selectedDateContainer').textContent = date;
+document.getElementById('date').value = date;
+          // ここで選択された日付を他の要素に表示する処理を行う
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        
+        document.getElementById("date").setAttribute("min", today);
+    });
+</script>
 </body>
 
 </html>

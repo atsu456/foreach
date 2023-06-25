@@ -460,6 +460,7 @@ reserve
 
 #reserve .section_reserve {
     display: flex;
+    gap: 20px;
 }
 
 #reserve .section_left {
@@ -585,36 +586,37 @@ input[type="email"],
 }
 
 .calendar-section {
+    color: var(--black);
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-.header {
+.calendar-section .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.header h1 {
+.calendar-section .header h1 {
     margin: 0;
     font-size: 1.2em;
 }
 
-.prev-btn,
-.next-btn {
+.calendar-section .prev-btn,
+.calendar-section .next-btn {
     background-color: transparent;
     border: none;
     font-size: 1.2em;
     cursor: pointer;
 }
 
-.calendar {
+.calendar-section .calendar {
     width: 100%;
     border-collapse: collapse;
 }
@@ -633,7 +635,27 @@ input[type="email"],
 .calendar td:hover {
     background-color: #ddd;
 }
+/* reserve_form */
+#reserve_form h1{
+    text-align: center;
+}
+#reserve_form form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    color: black; /* 文字の色を黒に設定 */
+    width: 80%; /* フォームの幅を縮小する */
+    max-width: 800px; /* フォームの最大横幅を800pxに制限する */
+}
 
+#reserve_form label {
+    margin: 10px 0 5px;
+}
+
+#reserve_form input, select, textarea, button {
+    padding: 5px;
+    width: 100%; /* 入力フィールドをフォームの幅に合わせる */
+}
 /*--------------------------------
 facility
 ----------------------------------*/
