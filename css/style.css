@@ -623,7 +623,7 @@ input[type="email"],
     background-color: #f2f2f2;
 }
 
-.calendar td:hover {
+.calendar .day:hover {
     background-color: #ddd;
 }
 /* reserve_form */
