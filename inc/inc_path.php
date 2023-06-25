@@ -1,2 +1,2 @@
 <?php
-    ini_set('include_path','/mampp/db_config');
+ini_set('include_path','/Applications/MAMP/db_config');
