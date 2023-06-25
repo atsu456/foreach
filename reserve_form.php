@@ -25,24 +25,43 @@
         <article>
         <h1>予約フォーム</h1>
 
-            <form action="submit.php" method="POST">
-            <label for="name">名前:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="date">日付:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="time">時間:</label>
-            <input type="time" id="time" name="time" required>
-
-            <label for="comments">コメント:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
-
-            <input type="submit" value="送信">
-            </form>
+        <form action="/reserve" method="post">
+        <label for="name">氏名:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">電話番号:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <label for="arrival">到着日:</label>
+        <input type="date" id="arrival" name="arrival" required>
+        
+        <label for="departure">出発日:</label>
+        <input type="date" id="departure" name="departure" required>
+        
+        <label for="number_of_people">人数:</label>
+        <input type="number" id="number_of_people" name="number_of_people" required>
+        
+        <label for="site_type">サイトタイプ:</label>
+        <select id="site_type" name="site_type">
+            <option value="free">フリーサイト(電源なし)</option>
+            <option value="auto">区画電源オートサイト(電源あり)</option>
+            <option value="solo">ソロキャンプサイト(電源なし)</option>
+        </select>
+        
+        <label for="additional_options">追加オプション:</label>
+        火起こしセット
+        <input type="checkbox" id="fire_kit" name="additional_options" value="fire_kit">
+        椅子
+        <input type="checkbox" id="chair" name="additional_options" value="chair">
+        
+        <label for="special_requests">特別な要求:</label>
+        <textarea id="special_requests" name="special_requests"></textarea>
+        
+        <button type="submit">予約</button>
+    </form>
 
 
 
