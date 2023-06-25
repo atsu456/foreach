@@ -36,14 +36,8 @@
                             <p class="arrivals">NEW&nbsp;ARRIVALS</p>
                         </h1>
                     </div>
-                    <div class="slider">
-                                <figure class="img"><img src="image/rantan.jpg" alt="ランタン"></figure>
-                                <figure class="img"><img src="image/cup.jpg" alt="マグカップ"></figure>
-                                <figure class="img"><img src="image/fire.jpg" alt="焚き火"></figure>
-                                <figure class="img"><img src="image/tent.jpg" alt="テント"></figure>
-                                <figure class="img"><img src="image/ramp.jpg" alt="ランプ"></figure>
-                    </div>
-                </section>
+         
+                
                 
                 <section id="collaboration" class="contents">
                     <div class="page_description right_flow">
@@ -66,10 +60,10 @@
                 <section id="ALL" class="contents">
                     <div class="page_description right_flow">
                         <h1 class="title-style">
-                            <p class="title-border-left">ALL&nbsp;PRODUCTS</p>
+                            <p class="title-border-left"><a href="all_products.php">ALL&nbsp;PRODUCTS</a></p>
                         </h1>
                      </div>
-                        <figure class="contents_img"><img src="image/frypan.jpg" alt="ベッド"></figure>
+                        <figure class="contents_img"><a href="all_products.php"><img src="image/frypan.jpg" alt="ベッド"></a></figure>
                 </section>
             </article>
         </main>
