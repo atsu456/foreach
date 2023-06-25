@@ -660,3 +660,40 @@ facility
     position: relative;
     margin-bottom: 150px;
 }
+/*--------------------------------
+news
+----------------------------------*/
+#news #mv {
+    background-image: url(../image/news.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    margin-bottom: 150px;
+}
+#news .news__item {
+    display: flex;
+    width: 1166px;
+    justify-content: space-between;
+}
+.recently{
+    text-align: center;
+    margin: 64px 0;
+}
+#textnews{
+    text-align: center;
+    background: var(--main-color);
+    width: auto;
+    height: auto;
+}
+#news .contents{
+    margin-bottom: 100px;
+}
+/*--------------------------------
+news detail
+----------------------------------*/
+.news_detail p{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
