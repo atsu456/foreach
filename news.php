@@ -148,8 +148,50 @@ require_once 'foreach_config.php';
         infinite: true
       });
     });
-</script>      
+</script>
+     
+<div class="calendar-section" id="calendar_link">
+<h1>
+          <a href="?refYear=<?= $objPrevMonth->format('Y') ?>&refMonth=<?= $objPrevMonth->format('m') ?> " class="nav-link">前の月</a>
+        <?= $thisYear . '年 / ' . $thisMonth . '月' ?>
+        <!-- ナビゲーションリンク -->
+        <a href="?refYear=<?= $objNextMonth->format('Y') ?>&refMonth=<?= $objNextMonth->format('m') ?>" class="nav-link">次の月</a>
+    </h1>
+  <div class="calendar">
+    <h1>newsカレンダー</h1>
+      <table>
+        <tr>
+          <!-- カレンダーの曜日の表示 -->
+          <?php foreach ($weekday as $day) : ?>
+            <th><?= $day; ?></th>
+          <?php endforeach; ?>
+        </tr>
+        <tr>
+          <!-- 1日の前の空欄を表示 -->
+          <?php for ($emptyCellCount = 0; $emptyCellCount < $thisFirstWeekDay; $emptyCellCount++) : ?>
+            <td></td>
+          <?php endfor; ?>
+          <!--　カレンダーの日付を表示 -->
+          <?php for ($dateCount = 1; $dateCount <= $thisFullDays; $dateCount++) : ?>
+            <td class="day" <?= "$thisYear-$thisMonth-$dateCount" == $objToday->format('Y-m-d') ? 'class="today"' : ''; ?>><?= $dateCount; ?></td>
+            <?php if (($dateCount + $thisFirstWeekDay) % 7 == 0) : ?>
+        </tr>
+        <?php if ($dateCount != $thisFullDays || $thisLastWeekDay != 6) : ?>
+          <tr>
+          <?php endif; ?>
+        <?php endif; ?>
+      <?php endfor; ?>
+      <!-- 最終日の後ろの空欄を表示 -->
+      <?php for ($emptyCellCount = 1; $emptyCellCount < (7 - $thisLastWeekDay); $emptyCellCount++) : ?>
+        <td></td>
+      <?php endfor; ?>
+      </table>
+  </div>
+    </div>
             </article>
+
+    
+
         </main>
         <footer class="footer">
         <div class="ft">
