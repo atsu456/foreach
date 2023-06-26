@@ -103,7 +103,13 @@ require_once 'func/func.php';
 
           <div class="calendar-section">
             
-            <h1><?= $thisYear . '年 / ' . $thisMonth . '月' ?></h1>
+          <h1>
+        <?= $thisYear . '年 / ' . $thisMonth . '月' ?>
+        <!-- ナビゲーションリンク -->
+        <a href="?refYear=<?= $objPrevMonth->format('Y') ?>&refMonth=<?= $objPrevMonth->format('m') ?>" class="nav-link">前の月</a>
+        <a href="?refYear=<?= $objNextMonth->format('Y') ?>&refMonth=<?= $objNextMonth->format('m') ?>" class="nav-link">次の月</a>
+    </h1>
+
             
             <table class="calendar">
             <tr>
