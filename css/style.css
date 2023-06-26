@@ -636,26 +636,65 @@ input[type="email"],
     background-color: #ddd;
 }
 /* reserve_form */
-#reserve_form h1{
+#reserve_form{
+    color: var(--black);
+}
+#reserve_form h1 {
     text-align: center;
-}
-#reserve_form form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-    color: black; /* 文字の色を黒に設定 */
-    width: 80%; /* フォームの幅を縮小する */
-    max-width: 800px; /* フォームの最大横幅を800pxに制限する */
-}
+  }
+  
+  #reserve_form form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  #reserve_form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #reserve_form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #reserve_form input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #reserve_form .option-group label {
+    font-weight: normal;
+  }
+  
+  #reserve_form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #reserve_form button:hover {
+    background-color: #45a049;
+  }
+  
+  #reserve_form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
 
-#reserve_form label {
-    margin: 10px 0 5px;
-}
-
-#reserve_form input, select, textarea, button {
-    padding: 5px;
-    width: 100%; /* 入力フィールドをフォームの幅に合わせる */
-}
 /*--------------------------------
 facility
 ----------------------------------*/

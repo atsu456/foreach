@@ -23,11 +23,70 @@
         </header>
     <main>
         <article>
-        <h1>予約フォーム</h1>
+        <h1>キャンプ場宿泊予約フォーム</h1>
+  
+  <form onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="name">名前:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">メールアドレス:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="check-in">宿泊日:</label>
+      <input type="date" id="check-in" name="check-in" min="2023-07-01" max="2023-12-31" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="guests">大人:</label>
+      <select id="guests" name="guests" required>
+        <option value="">選択してください</option>
+        <option value="1">1人</option>
+        <option value="2">2人</option>
+        <option value="3">3人</option>
+        <option value="4">4人</option>
+        <option value="5">5人</option>
+        <option value="6">6人</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="guests">子供:</label>
+      <select id="guests" name="guests" required>
+        <option value="">選択してください</option>
+        <option value="0">0人</option>
+        <option value="1">1人</option>
+        <option value="2">2人</option>
+        <option value="3">3人</option>
+        <option value="4">4人</option>
+      </select>
+    </div>
+    
+    
+    <div class="form-group option-group">
+      <label>追加オプション:</label>
+      <label for="option1">バーベキューセット<input type="checkbox" id="option1" name="options" value="バーベキューセット"></label>
+      <label for="option2">焚き火セット<input type="checkbox" id="option2" name="options" value="焚き火セット"></label>
+      <label for="option3">ランタン<input type="checkbox" id="option3" name="options" value="ランタン"></label>
+    </div>
+    
+    <button type="submit">予約する</button>
+  </form>
+
+
+
+
+        <!-- <h1>予約フォーム</h1>
 
         <form action="/reserve" method="post">
         <label for="name">氏名:</label>
         <input type="text" id="name" name="name" required>
+
+        <label for="name_kana">シメイ:</label>
+        <input type="text" id="name_kana" name_kana="name_kana" required>
         
         <label for="email">メールアドレス:</label>
         <input type="email" id="email" name="email" required>
@@ -35,7 +94,7 @@
         <label for="phone">電話番号:</label>
         <input type="tel" id="phone" name="phone">
         
-        <label for="arrival">到着日:</label>
+        <label for="arrival">利用日:</label>
         <input type="date" id="arrival" name="arrival" required>
         
         <label for="departure">出発日:</label>
@@ -60,8 +119,8 @@
         <label for="special_requests">特別な要求:</label>
         <textarea id="special_requests" name="special_requests"></textarea>
         
-        <button type="submit">予約</button>
-    </form>
+        <button type="submit">予約する</button>
+    </form> -->
 
 
 
@@ -104,5 +163,6 @@
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
        </footer>
+       <script>js/reserve_form.js</script>
 </body>
 </html>
