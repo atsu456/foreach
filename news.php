@@ -2,7 +2,6 @@
 session_start();
 require_once 'inc/inc_path.php';
 require_once 'func/func.php';
-require_once 'foreach_config.php';
 ?>
 
 <!DOCTYPE html>
