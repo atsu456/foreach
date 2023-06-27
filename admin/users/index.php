@@ -37,7 +37,7 @@ require_once 'foreach_config.php';
         <main class="admin_main">
 		<article id="admin">
 			<h1>管理：ユーザ</h1>
-			<p><a href="add.php">新規登録</a></p>
+			<p class="add"><a href="add.php">新規登録</a></p>
 			<?php
 				try{
 					$db = getDb($dsn, $usr, $passwd);

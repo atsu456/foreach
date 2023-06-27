@@ -39,7 +39,7 @@
                 </section>
 
                 <section id="plan">
-                    <table class="Plan">
+                    <table class="facility_tb">
                         <caption>Usage fee / Plan<br>ご利用料金・宿泊プラン</caption>
                         <tr>
                             <th>サイト</th>
@@ -69,7 +69,7 @@
                     </ul>
                 </section>
                 <section id="rental">
-                    <table class="rental">
+                    <table class="facility_tb rental">
                         <caption>Rental Service<br>レンタルサービス</caption>
                         <tr>
                             <th>ギア</th>
@@ -114,107 +114,99 @@
                     </table>
                 </section>
                 <section id="service">
-                    <p class="sec_terms">Terms of Service<br><span>ご利用規約</span></p>
-                    <p class="el_lv5Hd">スノーピークキャンプフィールド<br class="hp_brSp">ご利用規約</hp>
-                    <p class="el_pg el_pg__sMin">営業期間および営業時間 、ご利用にあたっての規約を以下のとおりと致します。</p>
-    </div>
-    <div class="bl_tableBasic_table">
-        <table>
-            <tbody>
-                <tr>
-                    <th>
-                        <h4 class="el_lv6Hd">営業期間</h4>
-                    </th>
-                    <td>
-                        <p class="el_pg el_pg__wid">通年</p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <h4 class="el_lv6Hd">営業時間</h4>
-                    </th>
-                    <td>
-                        <p class="el_pg el_pg__lBld">10:00 ～ 18:00</p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <h4 class="el_lv6Hd">宿泊</h4>
-                    </th>
-                    <td>
-                        <p class="el_pg el_pg__wid">チェックイン：12:00～18:00<br>チェックアウト：～11:00</p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <h4 class="el_lv6Hd">受付方法</h4>
-                    </th>
-                    <td>
-                        <p class="el_pg el_pg__wid">当キャンプ場は、「完全予約制」を採用しております。<br>
-                            予約フォームもしくはお電話にて承っております。<br>
-                            チェックインの際は、予約完了メールに記載のURLからダウンロードしたQRコードの提示をお願いいたします。<br>
-                            予約状況によっては、当日受付も可能です。当日受付の場合はストアまでご連絡ください。（電話番号：0493-81-6166）
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <h4 class="el_lv6Hd">禁止事項</h4>
-                    </th>
-                    <td>
-                        <p class="el_pg el_pg__wid">フィールド内では、安全で快適なキャンプライフを送れるよう、次の事項に該当する行為は、原則禁止としております。</p>
-                        <ul class="el_listBasic el_pg el_pg__wid">
-                            <li>ペットのご入場はお断りしております。ご了承ください。</li>
-                            <li>消灯時間以降（22時～7時）における他のお客さまへの迷惑行為</li>
-                            <li>ドローンの飛行(サイズにかかわらず禁止致します)</li>
-                            <li>直火による焚火</li>
-                            <li>サイト内での喫煙行為</li>
-                            <li>花火の使用（手持ち花火も含む）</li>
-                            <li>カラオケ、楽器の使用</li>
-                            <li>発電機の使用</li>
-                            <li>ゴミの放棄</li>
-                            <li>指定時間外の車両の入退場</li>
-                            <li>駐停車中のアイドリング</li>
-                            <li>管理者の許可なく、利用申込者以外のものを場内へ招き入れる</li>
-                            <li>管理者の許可を受けずに、物販、広告物を配布する行為</li>
-                            <li>法令の規定や公序良俗に反する行為</li>
-                            <li>大きな声や音を発生させ、他の利用者に著しく迷惑をかけること</li>
-                            <li>その他管理者の指定する行為</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        </section>
-        <section id="map">
-            <p class="map">Campfield Map<br>施設案内</p>
-            <!-- <img src="" alt=""> -->
-            <div class="facilityList">
-                <div class="list">
-                    <p>ストア・管理棟</p>
-                    <p>ストアではキャンプギア・アパレルの販売を行っています。ご滞在中にご不明な点等がございましたらお気軽にストアまでお越しください。</p>
-                </div>
-                
-                <div class="list">
-                <p>売店</p>
-                <p>薪や氷、調味料、消耗品等の商品を取り扱っています。</p>
-                </div>
+                    <table class="facility_tb service">
+                        <caption>Terms of Service<br>ご利用規約</caption>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <h4 class="el_lv6Hd">営業期間</h4>
+                                </th>
+                                <td>
+                                    <p class="el_pg el_pg__wid">通年</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <h4 class="el_lv6Hd">営業時間</h4>
+                                </th>
+                                <td>
+                                    <p class="el_pg el_pg__lBld">10:00 ～ 18:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <h4 class="el_lv6Hd">宿泊</h4>
+                                </th>
+                                <td>
+                                    <p class="el_pg el_pg__wid">チェックイン：12:00～18:00<br>チェックアウト：～11:00</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <h4 class="el_lv6Hd">受付方法</h4>
+                                </th>
+                                <td>
+                                    <p class="el_pg el_pg__wid">当キャンプ場は、「完全予約制」を採用しております。<br>
+                                        予約フォームもしくはお電話にて承っております。<br>
+                                        チェックインの際は、予約完了メールに記載のURLからダウンロードしたQRコードの提示をお願いいたします。<br>
+                                        予約状況によっては、当日受付も可能です。当日受付の場合はストアまでご連絡ください。（電話番号：0493-81-6166）
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <h4 class="el_lv6Hd">禁止事項</h4>
+                                </th>
+                                <td>
+                                    <p class="el_pg el_pg__wid">フィールド内では、安全で快適なキャンプライフを送れるよう、次の事項に該当する行為は、原則禁止としております。</p>
+                                    <ul class="el_listBasic el_pg el_pg__wid">
+                                        <li>ペットのご入場はお断りしております。ご了承ください。</li>
+                                        <li>消灯時間以降（22時～7時）における他のお客さまへの迷惑行為</li>
+                                        <li>ドローンの飛行(サイズにかかわらず禁止致します)</li>
+                                        <li>直火による焚火</li>
+                                        <li>サイト内での喫煙行為</li>
+                                        <li>花火の使用（手持ち花火も含む）</li>
+                                        <li>カラオケ、楽器の使用</li>
+                                        <li>発電機の使用</li>
+                                        <li>ゴミの放棄</li>
+                                        <li>指定時間外の車両の入退場</li>
+                                        <li>駐停車中のアイドリング</li>
+                                        <li>管理者の許可なく、利用申込者以外のものを場内へ招き入れる</li>
+                                        <li>管理者の許可を受けずに、物販、広告物を配布する行為</li>
+                                        <li>法令の規定や公序良俗に反する行為</li>
+                                        <li>大きな声や音を発生させ、他の利用者に著しく迷惑をかけること</li>
+                                        <li>その他管理者の指定する行為</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="map">
+                    <p class="map">Campfield Map<br>施設案内</p>
+                    <img src="image/フィールドマップ.png" alt="">
 
-                <div class="list">
-                <p>シャワー・トイレ</p>
-                <p>24時間どなたでもご利用いただけるシャワーを完備しています。シャンプー・ボディソープ等は各自ご用意ください。サニタリー棟のトイレは暖房便座と温水洗浄を完備しています。</p>
-                </div>
-
-                <div class="list">
-                <p>炊事棟・洗い場</p>
-                <p>サニタリー棟にある炊事場兼洗い場は、水、温水ともご自由にご利用いただけます。</p>
-                </div>
-
-            </div>
-        </section>
-
-
-        </article>
+                    <div class="facilityList">
+                        <table class="facility_tb list">
+                            <tr>
+                                <th>ストア・管理棟</th>
+                                <th>シャワー・トイレ</th>
+                            </tr>
+                            <tr>
+                                <td>ストアではキャンプギア・アパレルの販売を行っています。ご滞在中にご不明な点等がございましたらお気軽にストアまでお越しください。</td>
+                                <td>24時間どなたでもご利用いただけるシャワーを完備しています。シャンプー・ボディソープ等は各自ご用意ください。サニタリー棟のトイレは暖房便座と温水洗浄を完備しています。</td>
+                            </tr>
+                            <tr>
+                                <th>売店</th>
+                                <th>炊事棟・洗い場</th>
+                            </tr>
+                            <tr>
+                                <td>薪や氷、調味料、消耗品等の商品を取り扱っています。</td>
+                                <td>サニタリー棟にある炊事場兼洗い場は、水、温水ともご自由にご利用いただけます。</td>
+                            </tr>
+                        </table>
+                </section>
+            </article>
         </main>
 
         <footer class="footer">
