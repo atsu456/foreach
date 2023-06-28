@@ -65,7 +65,7 @@ require_once 'foreach_config.php';
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img class="img"><img src="image/fire.jpg" alt="焚き火">
+                <img src="image/fire.jpg" alt="焚き火">
                 </a>
                 </div>
                 <div>
