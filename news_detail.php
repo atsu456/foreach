@@ -47,9 +47,9 @@ $id = $_GET['id'];
 			$stt->execute();
 			$row = $stt->fetch(PDO::FETCH_ASSOC);
 		?>
-		<?php if ($animal) { ?>
+		<?php if ($row) { ?>
 			<img src= "<?= 'image/' . $row['news_image'] ?>" alt="">
-            <h1><?= e($animal['title']) ?></h1>
+            <h1><?= e($row['title']) ?></h1>
 			<h3>日付</h3>
 			<?= e($row['topics_date']) ?>
 			<h3>詳細情報</h3>
