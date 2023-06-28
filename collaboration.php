@@ -41,60 +41,14 @@ require_once 'foreach_config.php';
 
 <main>
    <article>
+   <section id="recently" class="contents">
+   <div class="page_description right_flow">
                         <h1 class="title-style">
-                            <p class="all_products">ALL PRODUCTS</p>
+                            <p class="title-border-left">comming soon</p>
                         </h1>
-    <div class="container">
-    <?php
-    try {
-      $db = getDb($dsn, $usr, $passwd);
-      $sql = 'SELECT id,name,price,image FROM products WHERE is_deleted = 0';
-      $stt = $db->query($sql);
-      $products = $stt->fetchAll(PDO::FETCH_ASSOC);
-      $db = null;
-      if (!empty($products)) :
-    ?>
-        <section class="grid-container">
-          <?php foreach ($products as $item) : ?>
-            <div class="item">
-              <div class="item__image">
-                <figure><img src="<?php echo $img_path . h($item['image']); ?>" alt="" width="300" height="200"></figure>
-              </div>
-              <h2 class="item__name"><?php echo h($item['name']); ?></h2>
-              <p class="item__price">&yen;<?php echo number_format($item['price']); ?></p>
-              <a href="cart_detail.php?id=<?php echo $item['id']; ?>" class="btn-item">詳しく見る</a>
-            </div>
-          <?php endforeach; ?>
-            </a>
-          </div>
-      <?php else : ?>
-        <p class="centering"><span>商品がありません。</span></p>
-      <?php endif; ?>
-        </section>
-        <div class="btn-cart">
-				<a href="cart.php">
-					<div class="btn-cart__inner">
-						<p class="btn-cart__quantity" id="js-cart-quantity" style="<?php echo isset($_SESSION['cart']['total_quantity']) && ($_SESSION['cart']['total_quantity'] > 0) ? 'display:grid' : 'display:none' ?>"><?php echo isset($_SESSION['cart']['total_quantity']) ? $_SESSION['cart']['total_quantity'] : '' ?></p>
-						<span class="material-symbols-outlined icon-cart">shopping_cart</span>
-					</div>
-				</a>
-			</div>
-
-  </div>
-   </article>
-   
+                    </div>
+    </section>
 </main>
-<?php
-    } catch (PDOException $e) {
-      echo 'エラー発生:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '<br>';
-      exit;
-    }
-?>
-
-
-                </section>
-            </article>
-        </main>
 
         <footer class="footer">
         <div class="ft">
