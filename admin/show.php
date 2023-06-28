@@ -32,8 +32,8 @@ $id = (int)$_POST['id'];
             <h1 class="header__logo"><a href="#"><img src="../image/camplogo.svg" alt="foreach campground"></a></h1>
             <nav id="g-nav">
                 <ul class="nav">
-                    <li class="g-nav__item"><a href="#">予約</a></li>
-                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="reserve.php">予約</a></li>
+                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>

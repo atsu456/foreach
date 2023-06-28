@@ -27,8 +27,8 @@ require_once '../func/func.php';
             <h1 class="header__logo"><a href="#"><img src="../image/camplogo.svg" alt="foreach campground"></a></h1>
             <nav id="g-nav">
                 <ul class="nav">
-                    <li class="g-nav__item"><a href="#">予約</a></li>
-                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="reserve.php">予約</a></li>
+                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
@@ -36,11 +36,13 @@ require_once '../func/func.php';
         <main class="admin_main">
 		<article id="admin">
 			<h1>管理メニュー</h1>
-			<p>ようこそ<?= e($_SESSION['login_name']) ?>さん</p>
+			<p>ようこそ<?= ($_SESSION['login_name']) ?>さん</p>
 			<ul>
 				<li><a href="users/">管理：ユーザ</a></li>
 				<li><a href="contact/">管理：お問い合わせ</a></li>
 				<li><a href="types/">管理：お問い合わせ種類</a></li>
+				<li><a href="orders/">管理：受注管理</a></li>
+				<li><a href="products/">管理：商品管理</a></li>
 				<li><a href="logout.php">ログアウト</a></li>
 			</ul>
 		</article>
