@@ -2,6 +2,7 @@
 require_once 'inc/inc_path.php';
 require_once 'foreach_config.php';
 require_once 'func/func.php';
+$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -37,30 +38,32 @@ require_once 'func/func.php';
         </header>
         <main>
         <article class="news_detail">
-			<?php
-			try{
-				$db = getDb( $dsn, $usr, $passwd);
-				$sql = 'SELECT * FROM news ORDER BY topics_date DESC';
-				$stt = $db->prepare($sql);
-				$stt->execute();
-				$result = $stt->fetchAll(PDO::FETCH_ASSOC);
-			?>
-			<?php foreach($result as $row): ?>
-				<?php
-					$topics_array = explode('-',$row['topics_date']);
-				?>
-                <figure><img src="<?= 'image/'.$row['news_image']; ?>" alt="" width="300" height="200"></figure>
-				<p>
-                    <time datetime="<?= $row ['topics_date'] ?>"><?= $topics_array[0] ?>年<?= $topics_array[1] ?>月<?= $topics_array[2] ?>日</time>
-                    <h3><?= nl2br(e($row['title'])) ?></h3>
-                    <?= nl2br(e($row['article'])) ?>
-				</p>	
-			<?php endforeach; ?>
-			<?php
-			}catch(PDOException $e){
-				die("接続エラー：{$e->getMessage()}");
-			}
-			?>
+        <?php
+		try {
+			$db = getDb($dsn, $usr, $passwd);
+			$sql = 'SELECT * FROM news WHERE id = :id';
+			$stt = $db->prepare($sql);
+			$stt->bindParam(':id', $id);
+			$stt->execute();
+			$row = $stt->fetch(PDO::FETCH_ASSOC);
+		?>
+		<?php if ($animal) { ?>
+			<img src= "<?= 'image/' . $row['news_image'] ?>" alt="">
+            <h1><?= e($animal['title']) ?></h1>
+			<h3>日付</h3>
+			<?= e($row['topics_date']) ?>
+			<h3>詳細情報</h3>
+			<?= e($row['article']) ?>
+            
+		<?php } else {
+            echo 'newsが見つかりませんでした。';
+        }
+		?>
+		<?php
+		} catch(PDOException $e) {
+        die("接続エラー：{$e->getMessage()}");
+    	}
+		?>
 		</article>
         </main>
         <footer class="footer">
