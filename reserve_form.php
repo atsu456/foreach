@@ -71,24 +71,24 @@
 
         </article>
     </main>
-    <footer class="footer">
+        <footer class="footer">
         <div class="ft">
         <ul class="ft__ul">
-        <li class="ft__logo"><a href="index.php"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
-        <li class="ft__add"><span class="ft__name">foreach camp&nbsp;ground</span></li>
+        <li class="ft__logo"><a href="#"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
+        <li class="ft__add"><span class="ft__name">foreach camp ground</span></li>
         <li class="ft__add">〒888-8888</li>
         <li class="ft__add">福岡県福岡市東区888-88</li>
         <li class="ft__add">0493-81-6166</li>
         </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="access.php">アクセス</a></li>
+                <li class="ft_links_li"><a href="#">アクセス</a></li>
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility">施設紹介</a></li>
-                <li class="ft_links_li"><a href="book.php">予約</a></li>
+                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
+                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
                 <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
+                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
@@ -103,6 +103,6 @@
                 </ul>
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
-       </footer>
+        </footer>
 </body>
 </html>
