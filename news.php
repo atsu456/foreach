@@ -63,7 +63,7 @@ require_once 'foreach_config.php';
 				?>
                 <div>
                 <?php foreach($result as $row): ?>
-                <a href="news_detail.php" method="post">
+                <a href="news_detail.php?id=<?= $row['id'] ?>">
                 <img src= "<?= 'img/' . $row['image_data'] ?>" alt="ランタン">
                 </a>
                 </div>
