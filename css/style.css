@@ -1299,6 +1299,49 @@ shop
   background-color: var(--grey-25);
 }
 
+/*--------------------------------
+contact
+----------------------------------*/
+
+#contact form, .contactForm {
+  padding: 30px;
+}
+
+#contact input[type="text"] {
+width: 200px;
+}
+
+#contact input[type="email"] {
+width: 300px;
+}
+
+#contact form p {
+margin-bottom: 30px;
+}
+
+#contact form p:nth-last-child(2) {
+margin-bottom: 7px;
+}
+
+#contact form p:last-child {
+margin-bottom: 0;
+}
+
+#contact input, textarea {
+margin-top: 7px;
+}
+
+#contact textarea {
+width: 420px;
+height: 115px;
+overflow-y: scroll;
+}
+
+.contact_end {
+  margin: 30px;
+}
+
+
 
 /*--------------------------------
 admin
