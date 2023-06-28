@@ -1,3 +1,10 @@
+
+<?php
+require_once 'inc/inc_path.php';
+require_once 'func/func.php';
+require_once 'foreach_config.php';
+require_once 'list/list.php';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,7 +18,7 @@
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="top">
+<body id="contact">
     <div id="container">
 
         <header class="header">
@@ -52,21 +59,20 @@
                     <li class="ft__add">福岡県福岡市東区888-88</li>
                     <li class="ft__add">0493-81-6166</li>
                 </ul>
-                            <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="#">アクセス</a></li>
-                <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
-                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
-            </ul>
-            <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
-                <li class="ft_links_li"><a href="#">事業情報</a></li>
-                <li class="ft_links_li"><a href="#">採用情報</a></li>
-                <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
-                <li class="ft_links_li"><a href="#">ソーシャルメディアポリシー</a></li>
-            </ul>
-
+                <ul class="ft_links_ul">
+                    <li class="ft_links_li"><a href="#">アクセス</a></li>
+                    <li class="ft_links_li"><a href="#">お知らせ</a></li>
+                    <li class="ft_links_li"><a href="#">施設紹介</a></li>
+                    <li class="ft_links_li"><a href="#">予約</a></li>
+                    <li class="ft_links_li"><a href="#">オンラインストア</a></li>
+                </ul>
+                <ul class="ft_links_ul">
+                    <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
+                    <li class="ft_links_li"><a href="#">事業情報</a></li>
+                    <li class="ft_links_li"><a href="#">採用情報</a></li>
+                    <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
+                    <li class="ft_links_li"><a href="#">ソーシャルメディアポリシー</a></li>
+                </ul>
             </div>
             <div class="ft_snsLinks">
                 <ul class="ft_snsLinks_ul">
