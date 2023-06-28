@@ -65,7 +65,7 @@ require_once 'foreach_config.php';
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img class="img"><img src="image/fire.jpg" alt="焚き火">
+                <img src="image/fire.jpg" alt="焚き火">
                 </a>
                 </div>
                 <div>
@@ -148,8 +148,82 @@ require_once 'foreach_config.php';
         infinite: true
       });
     });
-</script>      
+</script>
+     
+<div class="calendar-section" id="calendar_link">
+<h1>
+          <a href="?refYear=<?= $objPrevMonth->format('Y') ?>&refMonth=<?= $objPrevMonth->format('m') ?> " class="nav-link">前の月</a>
+        <?= $thisYear . '年 / ' . $thisMonth . '月' ?>
+        <!-- ナビゲーションリンク -->
+        <a href="?refYear=<?= $objNextMonth->format('Y') ?>&refMonth=<?= $objNextMonth->format('m') ?>" class="nav-link">次の月</a>
+    </h1>
+  <div class="calendar">
+    <h1>newsカレンダー</h1>
+      <table>
+        <tr>
+          <!-- カレンダーの曜日の表示 -->
+          <?php foreach ($weekday as $day) : ?>
+            <th><?= $day; ?></th>
+          <?php endforeach; ?>
+        </tr>
+        <tr>
+          <!-- 1日の前の空欄を表示 -->
+          <?php for ($emptyCellCount = 0; $emptyCellCount < $thisFirstWeekDay; $emptyCellCount++) : ?>
+            <td></td>
+          <?php endfor; ?>
+          <?php
+    try{
+// データベースに接続
+$db = getDb( $dsn, $usr, $passwd);
+// newsテーブルからデータを取得
+$stmt = $db->query("SELECT * FROM news");
+$newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+          <!-- カレンダーの日付を表示 -->
+<?php for ($dateCount = 1; $dateCount <= $thisFullDays; $dateCount++) : ?>
+  <?php
+  $currentDate = sprintf("%04d-%02d-%02d", $thisYear, $thisMonth, $dateCount);
+  $isTopicsDate = false;
+
+  // $newsItemsをループして、topics_dateと現在の日付を比較
+  foreach ($newsItems as $newsItem) {
+    if ($newsItem['topics_date'] == $currentDate) {
+      $isTopicsDate = true;
+      break;
+    }
+  }
+  ?>
+
+  <td class="day <?= $isTopicsDate ? 'topics-date' : '' ?>" <?= $currentDate == $objToday->format('Y-m-d') ? 'class="today"' : ''; ?>>
+    <?= $dateCount; ?>
+    <?php if ($isTopicsDate) : ?>
+      <span class="topics-mark">〇</span>
+    <?php endif; ?>
+  </td>
+
+  <?php if (($dateCount + $thisFirstWeekDay) % 7 == 0) : ?>
+    </tr>
+    <?php if ($dateCount != $thisFullDays || $thisLastWeekDay != 6) : ?>
+      <tr>
+      <?php endif; ?>
+    <?php endif; ?>
+<?php endfor; ?>
+      <?php
+    }catch(PDOException $e){
+				die("接続エラー：{$e->getMessage()}");
+			}
+			?>
+      <!-- 最終日の後ろの空欄を表示 -->
+      <?php for ($emptyCellCount = 1; $emptyCellCount < (7 - $thisLastWeekDay); $emptyCellCount++) : ?>
+        <td></td>
+      <?php endfor; ?>
+      </table>
+  </div>
+    </div>
             </article>
+
+    
+
         </main>
         <footer class="footer">
         <div class="ft">
