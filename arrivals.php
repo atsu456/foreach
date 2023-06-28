@@ -23,78 +23,16 @@
                 </ul>
             </nav>
         </header>
-
-        <main>
-            <article>
-
-                <section id="mv">
-                    <div class="mv__text">
-                        <h1 class="mv__copy">福岡にあるリゾート融合体</h1>
-                        <p class="mv__lead">QUIET PLACE<br>AND THE<br>STARRY SKY</p>
+<main>
+   <article>
+   <section id="recently" class="contents">
+   <div class="page_description right_flow">
+                        <h1 class="title-style">
+                            <p class="title-border-left">comming soon</p>
+                        </h1>
                     </div>
-                </section>
-
-                <section id="news" class="contents">
-                    <div class="news_page_description">
-                        <h1 class="title-style">
-                            01
-                            <p class="title-border-right">NEWS</p>
-                        </h1>
-                        <p>イベント情報など<br>最新の情報をお届けいたします。</p>
-                        <a href="news.php" class="btn">READ MORE</a>
-                    </div>
-                    <ul class="news__item">
-                        <li><a href="#">
-                                <figure class="img"><img src="../image/rantan.jpg" alt="ランタン"></figure>
-                            </a></li>
-                        <li><a href="#">
-                                <figure class="img"><img src="../image/cup.jpg" alt="マグカップ"></figure>
-                            </a></li>
-                        <li><a href="#">
-                                <figure class="img"><img src="../image/fire.jpg" alt="焚き火"></figure>
-                            </a></li>
-                    </ul>
-                </section>
-
-                <section id="facility" class="contents">
-                    <div class="page_description right_flow">
-                        <h1 class="title-style">
-                            02
-                            <p class="title-border-left">FACILITY</p>
-                        </h1>
-                        <p>サイトや料金など、<br>快適にキャンプをお楽しみ頂くための<br>施設をご紹介いたします。</p>
-                        <a href="#" class="btn btn_r">READ MORE</a>
-                    </div>
-                    <figure class="contents_img"><img src="../image/tent1.jpg" alt="テント"></figure>
-                </section>
-                
-                <section id="shop" class="contents">
-                    <div class="page_description">
-                        <h1 class="title-style">
-                            03
-                            <p class="title-border-right">shop</p>
-                        </h1>
-                        <p>キャンプギア、アパレル用品の購入はこちらから！<br>限定商品も取り扱っていますので<br>是非ご覧ください。</p>
-                        <a href="shop.php" class="btn">READ MORE</a>
-                        </div>
-                        <figure class="contents_img"><img src="../image/mug.jpg" alt="マグカップ"></figure>
-                </section>
-
-                <section id="access" class="contents">
-                    <div class="page_description right_flow">
-                        <h1 class="title-style">
-                            04
-                            <p class="title-border-left">ACCESS</p>
-                        </h1>
-                        <p>foreach camp ground<br>〒888-8888<br>福岡県福岡市東区888-88<br>0493-81-6166</p>
-                        <a href="#" class="btn btn_r">READ MORE</a>
-                        </div>
-                        <figure class="contents_img">googlemap</figure>
-                </section>
-
-            </article>
-        </main>
-
+    </section>
+</main>
         <footer class="footer">
         <div class="ft">
         <ul class="ft__ul">

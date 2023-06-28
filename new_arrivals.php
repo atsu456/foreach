@@ -41,9 +41,6 @@ require_once 'foreach_config.php';
 
 <main>
    <article>
-                        <h1 class="title-style">
-                            <p class="all_products">ALL PRODUCTS</p>
-                        </h1>
     <div class="container">
     <?php
     try {

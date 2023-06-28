@@ -9,7 +9,6 @@ if ($hierarchy_num > 1) {
 }
 $img_path = $path . 'image/';
 $page_title = 'カート';
-require_once $path . 'header.php';
 require_once $path . 'func/functions.php';
 ?>
 <!DOCTYPE html>
@@ -24,6 +23,8 @@ require_once $path . 'func/functions.php';
   <link href="css/slick-theme.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 <body id="shop">
     <div id="container">
 
@@ -81,7 +82,7 @@ require_once $path . 'func/functions.php';
         </tbody>
       </table>
       <div class="cart__btn-group centering">
-        <a href="./" class="btn btn-secondary">お買い物を続ける</a>
+        <a href="all_products.php" class="btn btn-secondary">お買い物を続ける</a>
         <a href="order.php" class="btn btn-primary">購入手続きへ進む</a>
       </div>
     </section>

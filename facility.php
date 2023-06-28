@@ -29,7 +29,7 @@
 
                 <section id="mv">
                     <div class="mv__text">
-                        <h1 class="mv__copy">FACILITY</h1>
+                        <h1 class="mv__lead">FACILITY</h1>
                     </div>
                 </section>
                 <section id="copy" class="contents">
@@ -184,7 +184,7 @@
                 </section>
                 <section id="map">
                     <p class="map">Campfield Map<br>施設案内</p>
-                    <img src="image/フィールドマップ.png" alt="">
+                    <img src="image/map.jpg" alt="">
 
                     <div class="facilityList">
                         <table class="facility_tb list">

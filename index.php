@@ -72,7 +72,7 @@
                     <div class="page_description">
                         <h2 class="title-style">
                             03
-                            <p class="title-border-right">STORE</p>
+                            <p class="title-border-right">SHOP</p>
                         </h2>
                         <p>キャンプギア、アパレル用品の購入はこちらから！<br>限定商品も取り扱っていますので<br>是非ご覧ください。</p>
                         <a href="shop.php" class="btn">READ MORE</a>
@@ -87,9 +87,9 @@
                             <p class="title-border-left">ACCESS</p>
                         </h2>
                         <p>foreach camp ground<br>〒888-8888<br>福岡県福岡市東区888-88<br>0493-81-6166</p>
-                        <a href="#" class="btn btn_r">READ MORE</a>
+                        <a href="#" class="btn btn_r">coming soon</a>
                         </div>
-                        <figure class="contents_img">googlemap</figure>
+                        <figure class="contents_img"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.4990464990346!2d130.41543891189113!3d33.618300173212035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35418e24cd64f3c5%3A0x73c2317117dd07f9!2z56aP5bKh5biC5p2x5Yy65L-d5YGl56aP56WJ44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1687952413671!5m2!1sja!2sjp" width="740" height="576" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure>
                 </section>
 
             </article>
