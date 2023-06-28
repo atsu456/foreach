@@ -53,7 +53,7 @@ require_once 'foreach_config.php';
                         </h1>
                     </div>
                 <section class="regular slider" >
-                <?php
+        <!-- <?php
 				try{
 					$db = getDb( $dsn, $usr, $passwd);
 					$sql = 'SELECT * FROM news';
@@ -63,8 +63,8 @@ require_once 'foreach_config.php';
 				?>
                 <div>
                 <?php foreach($result as $row): ?>
-                <a href="news_detail.php?id=<?= $row['id'] ?>">
-                <img src= "<?= 'img/' . $row['image_data'] ?>" alt="ランタン">
+                <a href="news_detail.php?id=<?= $row['id'] ?>" method="post">
+                <img src= "<?= 'image/' . $row['news_image'] ?>" alt="ランタン">
                 </a>
                 </div>
                 <?php endforeach; ?>         
@@ -72,11 +72,11 @@ require_once 'foreach_config.php';
 				}catch(PDOException $e){
 					die("接続エラー：{$e->getMessage()}");
 				}
-			?>
+			?> -->
 
 
 
-                <!-- <div>
+                <div>
                 <a href="news_detail.php" method="post">
                 <img src="image/rantan.jpg" alt="ランタン">
                 </a>
@@ -105,7 +105,7 @@ require_once 'foreach_config.php';
                 <a href="news_detail.php" method="post">
                 <img src="image/tent.jpg" alt="テント">
                 </a>
-                </div> -->
+                </div>
             </section>
     <div>
       <!-- this slide should inherit the sizes attr from the parent slider -->
@@ -220,7 +220,9 @@ $newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <td class="day <?= $isTopicsDate ? 'topics-date' : '' ?>" <?= $currentDate == $objToday->format('Y-m-d') ? 'class="today"' : ''; ?>>
     <?= $dateCount; ?>
     <?php if ($isTopicsDate) : ?>
+      <a href="news_detail.php?id=<?= $newsItem['id'] ?>">
       <span class="topics-mark">〇</span>
+    </a>
     <?php endif; ?>
   </td>
 
