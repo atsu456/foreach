@@ -40,7 +40,7 @@ require_once 'func/func.php';
 			<?php
 			try{
 				$db = getDb( $dsn, $usr, $passwd);
-				$sql = 'SELECT * FROM news ORDER BY topics_date DESC LIMIT 3';
+				$sql = 'SELECT * FROM news ORDER BY topics_date DESC';
 				$stt = $db->prepare($sql);
 				$stt->execute();
 				$result = $stt->fetchAll(PDO::FETCH_ASSOC);
@@ -49,10 +49,10 @@ require_once 'func/func.php';
 				<?php
 					$topics_array = explode('-',$row['topics_date']);
 				?>
+                <figure><img src="<?= 'image/'.$row['news_image']; ?>" alt="" width="300" height="200"></figure>
 				<p>
+                    <time datetime="<?= $row ['topics_date'] ?>"><?= $topics_array[0] ?>年<?= $topics_array[1] ?>月<?= $topics_array[2] ?>日</time>
                     <h3><?= nl2br(e($row['title'])) ?></h3>
-					<time datetime="<?= $row ['topics_date'] ?>"><?= $topics_array[0] ?>年<?= $topics_array[1] ?>月<?= $topics_array[2] ?>日</time>
-                    <br>
                     <?= nl2br(e($row['article'])) ?>
 				</p>	
 			<?php endforeach; ?>
@@ -63,24 +63,24 @@ require_once 'func/func.php';
 			?>
 		</article>
         </main>
-            <footer class="footer">
+        <footer class="footer">
         <div class="ft">
         <ul class="ft__ul">
-        <li class="ft__logo"><a href="#"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
-        <li class="ft__add"><span class="ft__name">foreach camp ground</span></li>
+        <li class="ft__logo"><a href="index.php"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
+        <li class="ft__add"><span class="ft__name">foreach camp&nbsp;ground</span></li>
         <li class="ft__add">〒888-8888</li>
         <li class="ft__add">福岡県福岡市東区888-88</li>
         <li class="ft__add">0493-81-6166</li>
         </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="#">アクセス</a></li>
+                <li class="ft_links_li"><a href="access.php">アクセス</a></li>
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
-                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
+                <li class="ft_links_li"><a href="facility">施設紹介</a></li>
+                <li class="ft_links_li"><a href="book.php">予約</a></li>
                 <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
+                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
