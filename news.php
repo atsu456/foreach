@@ -53,7 +53,30 @@ require_once 'foreach_config.php';
                         </h1>
                     </div>
                 <section class="regular slider" >
+                <?php
+				try{
+					$db = getDb( $dsn, $usr, $passwd);
+					$sql = 'SELECT * FROM news';
+					$stt = $db->prepare($sql);
+					$stt->execute();
+					$result = $stt->fetchAll(PDO::FETCH_ASSOC);
+				?>
                 <div>
+                <?php foreach($result as $row): ?>
+                <a href="news_detail.php" method="post">
+                <img src= "<?= 'img/' . $row['image_data'] ?>" alt="ランタン">
+                </a>
+                </div>
+                <?php endforeach; ?>         
+			<?php
+				}catch(PDOException $e){
+					die("接続エラー：{$e->getMessage()}");
+				}
+			?>
+
+
+
+                <!-- <div>
                 <a href="news_detail.php" method="post">
                 <img src="image/rantan.jpg" alt="ランタン">
                 </a>
@@ -82,7 +105,7 @@ require_once 'foreach_config.php';
                 <a href="news_detail.php" method="post">
                 <img src="image/tent.jpg" alt="テント">
                 </a>
-                </div>
+                </div> -->
             </section>
     <div>
       <!-- this slide should inherit the sizes attr from the parent slider -->
