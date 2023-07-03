@@ -10,7 +10,7 @@ if ($hierarchy_num > 1) {
 $page_title = '受注管理';
 require_once $path . 'func/functions.php';
 require_once $path . 'inc/inc_path.php';
-require_once 'foreach_config.php';
+require_once $path . 'foreach_config.php';
 try {
   $db = getDb($dsn, $usr, $passwd);
   $sql = 'SELECT id,name,created_on FROM orders ORDER BY id';
