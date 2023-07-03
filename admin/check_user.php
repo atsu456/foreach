@@ -2,7 +2,7 @@
 session_start();       //セッションを使用する
 require_once '../inc/inc_path.php';
 require_once '../func/func.php';
-require_once 'foreach_config.php';
+require_once '../../foreach_config.php';
 
 
 $email = $_POST['email'];
