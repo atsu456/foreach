@@ -32,7 +32,7 @@ require_once 'foreach_config.php';
             <h1 class="header__logo"><a href="index.php"><img src="image/camplogo.svg" alt="foreach campground"></a></h1>
             <nav id="g-nav">
                 <ul class="nav">
-                    <li class="g-nav__item"><a href="book.php">予約</a></li>
+                    <li class="g-nav__item"><a href="reserve.php">予約</a></li>
                     <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
@@ -52,7 +52,7 @@ require_once 'foreach_config.php';
                             <p class="recently">RECENTLY&nbsp;NEWS</p>
                         </h1>
                     </div>
-                <section class="regular slider" >
+                    <section class="regular slider slideshow newsslide" >
         <!-- <?php
 				try{
 					$db = getDb( $dsn, $usr, $passwd);
@@ -78,100 +78,47 @@ require_once 'foreach_config.php';
 
                 <div>
                 <a href="news_detail.php" method="post">
-                <img src="image/rantan.jpg" alt="ランタン">
+                <img src="image/26155542_m.jpg" alt="びーる">
+                <p>2023年06月11日</p>
+                
                 </a>
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img src="image/cup.jpg" alt="マグカップ">
+                <img src="image/26155548_s.jpg" alt="あじさい">
+                <p>2023年06月01日</p>
                 </a>
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img src="image/fire.jpg" alt="焚き火">
+                <img src="image/26230033_s.jpg" alt="ランニング">
+                <p>2023年05月05日</p>
                 </a>
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img src="image/tent.jpg" alt="テント">
+                <img src="image/27009191_m.jpg" alt="夜">
+                <p>2023年06月20日</p>
                 </a>
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img src="image/tent.jpg" alt="テント">
+                <img src="image/26882613_s.jpg" alt="家族">
+                <p>2023年06月11日</p>
                 </a>
                 </div>
                 <div>
                 <a href="news_detail.php" method="post">
-                <img src="image/tent.jpg" alt="テント">
+                <img src="image/27010370_s.jpg" alt="女性たち">
+                <p>2023年05月23日</p>
                 </a>
                 </div>
             </section>
-    <div>
+                <div>
       <!-- this slide should inherit the sizes attr from the parent slider -->
       <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
     </div>
   </section>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-      $(".vertical-center-4").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 4,
-        slidesToScroll: 2
-      });
-      $(".vertical-center-3").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".vertical-center-2").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
-      });
-      $(".vertical-center").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-      });
-      $(".vertical").slick({
-        dots: true,
-        vertical: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".center").slick({
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 5,
-        slidesToScroll: 3
-      });
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        variableWidth: true
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
-      });
-    });
-</script>
      
 <div class="calendar-section" id="calendar_link">
 <h1>
@@ -286,6 +233,66 @@ $newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/app.js"></script>
+  <!-- <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script> -->
+  <script type="text/javascript">
+    // $(document).on('ready', function() {
+    //   $(".slider").slick({
+    //     dots: true,
+    //     vertical: true,
+    //     centerMode: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 2
+    //   });
+    //   $(".vertical-center-3").slick({
+    //     dots: true,
+    //     vertical: true,
+    //     centerMode: true,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3
+    //   });
+    //   $(".vertical-center-2").slick({
+    //     dots: true,
+    //     vertical: true,
+    //     centerMode: true,
+    //     slidesToShow: 2,
+    //     slidesToScroll: 2
+    //   });
+    //   $(".vertical-center").slick({
+    //     dots: true,
+    //     vertical: true,
+    //     centerMode: true,
+    //   });
+    //   $(".vertical").slick({
+    //     dots: true,
+    //     vertical: true,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3
+    //   });
+    //   $(".regular").slick({
+    //     dots: true,
+    //     infinite: true,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3
+    //   });
+    //   $(".center").slick({
+    //     dots: true,
+    //     infinite: true,
+    //     centerMode: true,
+    //     slidesToShow: 5,
+    //     slidesToScroll: 3
+    //   });
+    //   $(".variable").slick({
+    //     dots: true,
+    //     infinite: true,
+    //     variableWidth: true
+    //   });
+    //   $(".lazy").slick({
+    //     lazyLoad: 'ondemand', // ondemand progressive anticipated
+    //     infinite: true
+    //   });
+    // });
+</script>
+
 </body>
 
 </html>

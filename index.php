@@ -29,7 +29,7 @@
 
                 <section id="mv">
                     <div class="mv__text">
-                        <h1 class="mv__copy">福岡にあるリゾート融合体</h1>
+                        <h1 class="mv__copy">福岡にあるリゾートと森の融合体</h1>
                         <p class="mv__lead">QUIET PLACE<br>AND THE<br>STARRY SKY</p>
                     </div>
                 </section>
@@ -44,13 +44,13 @@
                         <a href="news.php" class="btn">READ MORE</a>
                     </div>
                     <ul class="news__item">
-                        <li><a href="#">
+                        <li><a href="news_detail.php">
                                 <figure class="img"><img src="image/rantan.jpg" alt="ランタン"></figure>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="news_detail.php">
                                 <figure class="img"><img src="image/cup.jpg" alt="マグカップ"></figure>
                             </a></li>
-                        <li><a href="#">
+                        <li><a href="news_detail.php">
                                 <figure class="img"><img src="image/fire.jpg" alt="焚き火"></figure>
                             </a></li>
                     </ul>
@@ -72,7 +72,7 @@
                     <div class="page_description">
                         <h2 class="title-style">
                             03
-                            <p class="title-border-right">SHOP</p>
+                            <p class="title-border-right">ONLINE SHOP</p>
                         </h2>
                         <p>キャンプギア、アパレル用品の購入はこちらから！<br>限定商品も取り扱っていますので<br>是非ご覧ください。</p>
                         <a href="shop.php" class="btn">READ MORE</a>

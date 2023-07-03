@@ -7,8 +7,8 @@ if ($hierarchy_num > 1) {
 		$path .= '../';
 	}
 }
-require_once $path . 'func/functions.php';
-require_once $path . 'inc/inc_path.php';
+require_once 'func/functions.php';
+require_once 'inc/inc_path.php';
 require_once 'foreach_config.php';
 $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
 
@@ -21,7 +21,7 @@ try {
 	$item = $stt->fetch(PDO::FETCH_ASSOC);
 	$db = null;
 
-  $img_path = $path . 'image/';
+  $img_path = 'image/';
   $page_title = '商品一覧';
     if (!empty($item)) {
 		$page_title = h($item['name']);
@@ -51,7 +51,7 @@ try {
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
@@ -115,21 +115,20 @@ try {
         <li class="ft__add">福岡県福岡市東区888-88</li>
         <li class="ft__add">0493-81-6166</li>
         </ul>
-                        <ul class="ft_links_ul">
+            <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="#">アクセス</a></li>
-                <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
-                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="#">お知らせ</a></li>
+                <li class="ft_links_li"><a href="#">施設紹介</a></li>
+                <li class="ft_links_li"><a href="#">予約</a></li>
+                <li class="ft_links_li"><a href="#">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
+                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
                 <li class="ft_links_li"><a href="#">ソーシャルメディアポリシー</a></li>
             </ul>
-
             </div>
             <div class="ft_snsLinks">
                 <ul class="ft_snsLinks_ul">

@@ -1,7 +1,9 @@
 $(function(){
+    console.log('slider');
     $('.slideshow').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-        dots: true
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
     });
 });

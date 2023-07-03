@@ -8,8 +8,7 @@ if ($hierarchy_num > 1) {
   }
 }
 $page_title = '注文完了';
-require_once $path . 'header.php';
-require_once $path . 'func/functions.php';
+require_once 'func/functions.php';
 require_once 'inc/inc_path.php';
 require_once 'foreach_config.php';
 
@@ -76,17 +75,20 @@ try {
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-    <div class="container">
+    <div class="container container-narrow">
+    <section class="cart">
       <p class="cart-thanks-msg centering">ご注文ありがとうございました！</p>
       <p class="centering">
-        <button class="btn btn-primary" type="button" onclick="location.href='./';">お買い物を続ける</button>
+        <br>
+        <button class="btn btn-primary" type="button" onclick="location.href='all_products.php';">お買い物を続ける</button>
       </p>
+    </section>
     </div>
   </main>
         <footer class="footer">
@@ -100,13 +102,13 @@ try {
         </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="#">アクセス</a></li>
-                <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
-                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="#">お知らせ</a></li>
+                <li class="ft_links_li"><a href="#">施設紹介</a></li>
+                <li class="ft_links_li"><a href="#">予約</a></li>
+                <li class="ft_links_li"><a href="#">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
+                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
@@ -121,7 +123,7 @@ try {
                 </ul>
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
-        </footer>
+        </footer>   
 <?php
 } catch (PDOException $e) {
   echo 'エラー発生:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '<br>';

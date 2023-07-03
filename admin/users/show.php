@@ -1,13 +1,17 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])){
-	header('Location:login.php');
+//セッション情報がセットされていなかったらログインページへ
+if (!isset($_SESSION['login'])) {
+    header('Location:../login.php');
 }
-require_once '../../inc/inc_path.php';
-require_once '../../func/func.php';
+
+require_once '../inc/inc_path.php';
+require_once '../func/func.php';
 require_once 'foreach_config.php';
+
 $id = (int)$_POST['id'];
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -16,7 +20,7 @@ $id = (int)$_POST['id'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
 </head>
@@ -25,51 +29,50 @@ $id = (int)$_POST['id'];
     <div id="container">
 
         <header class="header">
-            <h1 class="header__logo"><a href="#"><img src="../../image/camplogo.svg" alt="foreach campground"></a></h1>
+            <h1 class="header__logo"><a href="#"><img src="../image/camplogo.svg" alt="foreach campground"></a></h1>
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="admin_main">
-		<article id="admin">
-			<h1>詳細：ユーザ</h1>
-			<?php
-				try{
-					$db = getDb($dsn, $usr, $passwd);
-					$sql = 'SELECT * FROM users WHERE id = :id';
-					$stt = $db->prepare($sql);
-					$stt->bindValue(':id',$id,PDO::PARAM_INT);
-					$stt->execute();
-					$result = $stt->fetch(PDO::FETCH_ASSOC);
-			?>
-			<div class="admin">
-				<dl>
-					<dt>ID</dt>
-					<dd><?= $result['id'] ?></dd>
-					<dt>ユーザー名</dt>
-					<dd><?= e($result['name']) ?></dd>
-					<dt>メールアドレス</dt>
-					<dd><?= e($result['email']) ?></dd>
-
-				</dl>
-				<p><input type="button" value="戻る" onclick="history.back()"></p>
-			</div>
-			<?php
-				}catch(PDOException $e){
-					die("接続エラー：{$e->getMessage()}");
-				}
-			?>
-		</article>
+            <article id="admin">
+                <h1>詳細：ユーザ</h1>
+                <?php
+                try {
+                    $db = getDb($dsn, $usr, $passwd);
+                    $sql = 'SELECT * FROM users WHERE id = :id';
+                    $stt = $db->prepare($sql);
+                    $stt->bindValue(':id', $id, PDO::PARAM_INT);
+                    $stt->execute();
+                    $result = $stt->fetch(PDO::FETCH_ASSOC);
+                ?>
+                    <div class="admin">
+                        <dl>
+                            <dt>ID</dt>
+                            <dd><?= $result['id'] ?></dd>
+                            <dt>メールアドレス</dt>
+                            <dd><?= $result['email'] ?></dd>
+                            <dt>パスワード</dt>
+                            <dd><?= e($result['password']) ?></dd>
+                        </dl>
+                        <p><input type="button" value="戻る" onclick="history.back()"></p>
+                    </div>
+                <?php
+                } catch (PDOException $e) {
+                    die("接続エラー：{$e->getMessage()}");
+                }
+                ?>
+            </article>
         </main>
 
         <footer class="footer">
             <div class="ft">
                 <ul class="ft__ul">
-                    <li class="ft__logo"><a href="#"><img src="../../image/camplogo.svg" alt="foreach campground"></a></li>
+                    <li class="ft__logo"><a href="#"><img src="../image/camplogo.svg" alt="foreach campground"></a></li>
                     <li class="ft__add"><span class="ft__name">foreach camp ground</span></li>
                     <li class="ft__add">〒888-8888</li>
                     <li class="ft__add">福岡県福岡市東区888-88</li>

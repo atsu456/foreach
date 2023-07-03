@@ -1,11 +1,12 @@
 <?php
 
 function e(string $str, string $charset = 'UTF-8'): string{
-    return htmlspecialchars($str , ENT_QUOTES | ENT_HTML5 , $charset, false);
+    return htmlspecialchars($str, ENT_QUOTES | ENT_HTML5, $charset, false);
 }
 
 function getDb($dsn,$usr,$passwd) : PDO {
-    //データベースへの接続を確立
+
+    // データベースの接続を確立
     $db = new PDO($dsn, $usr, $passwd);
     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     return $db;
@@ -24,14 +25,13 @@ function numbers($num){
     }
     return $contact_number;
 }
-
-//カレンダー
-
+?>
+<?php
 // タイムゾーンを日本に変更
 date_default_timezone_set('Asia/Tokyo');
 // 曜日表示用の配列
-$weekday = array('日', '月', '火', '水', '木', '金', '土',);
-// $weekday = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat',);
+// $weekday = array('日', '月', '火', '水', '木', '金', '土',);
+$weekday = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat',);
 
 // GETで基準日のデータを受け取れたら値を変数へ格納
 $refYear = isset($_GET['refYear']) ? $_GET['refYear'] : '';
@@ -72,3 +72,4 @@ $thisLastWeekDay = $objLastDateTime->format('w');
 $objPrevMonth = new DateTime("$thisYear-$thisMonth-1 -1 Months");
 // 次月のオブジェクトを生成
 $objNextMonth = new DateTime("$thisYear-$thisMonth-1 +1 Months");
+?>

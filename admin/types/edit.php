@@ -32,7 +32,7 @@ $id = (int)$_POST['id'];//一覧画面から送信されたIDを受け取る
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>

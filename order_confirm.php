@@ -8,8 +8,7 @@ if ($hierarchy_num > 1) {
   }
 }
 $page_title = '注文情報確認';
-require_once $path . 'header.php';
-require_once $path . 'func/functions.php';
+require_once 'func/functions.php';
 
 $name = ($_POST['name']);
 $email = ($_POST['email']);
@@ -36,13 +35,14 @@ $address = ($_POST['address']);
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
   <div class="container container-narrow">
+  <section class="cart">
     <form action="order_done.php" method="post">
       <p class="form-item">
         <span>お名前</span><span><?php echo $name; ?></span><input type="hidden" name="name" id="name" value="<?php echo $name; ?>">
@@ -71,13 +71,13 @@ $address = ($_POST['address']);
         </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="#">アクセス</a></li>
-                <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
-                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="#">お知らせ</a></li>
+                <li class="ft_links_li"><a href="#">施設紹介</a></li>
+                <li class="ft_links_li"><a href="#">予約</a></li>
+                <li class="ft_links_li"><a href="#">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
+                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
@@ -92,6 +92,6 @@ $address = ($_POST['address']);
                 </ul>
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
-        </footer>  
+        </footer>    
 </body>
 </html>

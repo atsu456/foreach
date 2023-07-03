@@ -29,7 +29,7 @@ require_once 'foreach_config.php';
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
@@ -37,7 +37,7 @@ require_once 'foreach_config.php';
         <main class="admin_main">
 		<article id="admin">
 			<h1>管理：お問い合わせ種類</h1>
-			<p class="add"><a href="add.php">新規登録</a></p>
+			<p><a href="add.php">新規登録</a></p>
 			<?php
 				try{
 					$db = getDb($dsn, $usr, $passwd);

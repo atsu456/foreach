@@ -102,11 +102,16 @@ require_once 'func/func.php';
         <h1>空室カレンダー</h1>
 
           <div class="calendar-section">
-            
-            <h1><?= $thisYear . '年 / ' . $thisMonth . '月' ?></h1>
-            
+          <h1>    
+        <!-- ナビゲーションリンク -->
+        <a rel="prev" href="?refYear=<?= $objPrevMonth->format('Y') ?>&refMonth=<?= $objPrevMonth->format('m') ?>" class="nav-link">&lt;</a>
+        <?= $thisYear . '年 / ' . $thisMonth . '月' ?>
+    
+        <!-- ナビゲーションリンク -->
+        <a rel="next" href="?refYear=<?= $objNextMonth->format('Y') ?>&refMonth=<?= $objNextMonth->format('m') ?>" class="nav-link">&gt;</a>
+    </h1>            
             <table class="calendar">
-            <tr>
+        <tr>
           <!-- カレンダーの曜日の表示 -->
           <?php foreach ($weekday as $day) : ?>
             <th><?= $day; ?></th>
@@ -119,8 +124,13 @@ require_once 'func/func.php';
           <?php endfor; ?>
           <!--　カレンダーの日付を表示 -->
           <?php for ($dateCount = 1; $dateCount <= $thisFullDays; $dateCount++) : ?>
-            <?php $d = $objToday->format('j') ?>
-            <?php if($dateCount >= $d): ?>
+            <?php $d = $objToday->format('Y-m-d') ?>
+          <?php if(strlen($dateCount) == 1){
+            $dateCount = '0' . $dateCount;
+          }
+          $d2 = $thisYear . "-" . $thisMonth . "-" . $dateCount;
+          ?>
+            <?php if($d2 >= $d): ?>
             <td class="day <?= "$thisYear-$thisMonth-$dateCount" == $objToday->format('Y-m-d') ? 'today' : ''; ?>" onclick="showSelectedDate('<?= "$thisYear-$thisMonth-$dateCount" ?>')">
             <?= $dateCount; ?><br>
             〇
@@ -143,7 +153,7 @@ require_once 'func/func.php';
       <?php for ($emptyCellCount = 1; $emptyCellCount < (7 - $thisLastWeekDay); $emptyCellCount++) : ?>
         <td></td>
       <?php endfor; ?>
-            </table>
+      </table>
           </div>
         </div>
     </div>

@@ -8,8 +8,7 @@ if ($hierarchy_num > 1) {
   }
 }
 $page_title = '注文情報入力';
-require_once $path . 'header.php';
-require_once $path . 'func/functions.php';
+require_once 'func/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +31,14 @@ require_once $path . 'func/functions.php';
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
   <div class="container container-narrow">
+    <section class="cart">
     <form action="order_confirm.php" method="post">
       <p class="form-item">
         <label for="name">お名前</label><input type="text" name="name" id="name" required>
@@ -61,7 +61,7 @@ require_once $path . 'func/functions.php';
             </article>
         </main>
 
-         <footer class="footer">
+        <footer class="footer">
         <div class="ft">
         <ul class="ft__ul">
         <li class="ft__logo"><a href="#"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
@@ -72,13 +72,13 @@ require_once $path . 'func/functions.php';
         </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="#">アクセス</a></li>
-                <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
-                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="#">お知らせ</a></li>
+                <li class="ft_links_li"><a href="#">施設紹介</a></li>
+                <li class="ft_links_li"><a href="#">予約</a></li>
+                <li class="ft_links_li"><a href="#">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
+                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
