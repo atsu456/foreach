@@ -32,7 +32,7 @@ require_once 'foreach_config.php';
         <nav id="g-nav">
         <ul class="nav">
             <li class="g-nav__item"><a href="#">予約</a></li>
-            <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+            <li class="g-nav__item"><a href="onlineshop.php">オンラインショップ</a></li>
         </ul>
             </nav>
         </header>
@@ -101,7 +101,7 @@ require_once 'foreach_config.php';
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
                 <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
                 <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="onlineshop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>

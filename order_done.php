@@ -86,7 +86,7 @@ try {
       <p class="cart-thanks-msg centering">ご注文ありがとうございました！</p>
       <p class="centering">
         <br>
-        <button class="btn btn-primary" type="button" onclick="location.href='all_products.php';">お買い物を続ける</button>
+        <button class="btn btn-primary" type="button" onclick="location.href='onlineshop.php';">お買い物を続ける</button>
       </p>
     </section>
     </div>

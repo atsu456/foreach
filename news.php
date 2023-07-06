@@ -33,102 +33,66 @@ require_once 'foreach_config.php';
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="onlineshop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <article>
-
                 <section id="mv">
                     <div class="mv__text">
                         <h1 class="mv__lead">NEWS</h1>
                     </div>
                 </section>
+                
                 <section id="recently" class="contents">
+                <section class="regular slider newsslide" >
+                    <?php
+                    try{
+                      $db = getDb( $dsn, $usr, $passwd);
+                      $sql = 'SELECT * FROM news';
+                      $stt = $db->prepare($sql);
+                      $stt->execute();
+                      $result = $stt->fetchAll(PDO::FETCH_ASSOC);          
+                    ?>
+                            <div class="slideshow">
+                            <?php foreach($result as $row): ?>
+                            <a href="news_detail.php?id=<?= $row['id'] ?>" method="post">
+                            <img src= "<?= 'image/' . $row['news_image'] ?>" alt="news_image">
+                            <p class="news_slide_images"><?= $row['title'] ?></p>
+                          </a>
+                            <?php endforeach; ?>         
+                            </div>
+                  <?php
+                    }catch(PDOException $e){
+                      die("接続エラー：{$e->getMessage()}");
+                    }
+                  ?> 
+                <div>
+    </div>
+    </section>
+
                     <div class="news_description">
                         <h1 class="title-style">
-                            <p class="recently">RECENTLY&nbsp;NEWS</p>
+                            <p class="recently title-border-right">NEWS&nbsp;INFORMATION</p>
+                            <p class="description">
+                            たくさんの方にキャンプを楽しんでもらう為に、
+                            色々なイベントを開催しています！<br>
+                            安心して楽しめるイベント！<br>
+                            おいしいご飯！<br>
+                            いろんな仲間と過ごしてみませんか？
+                            </p>
                         </h1>
                     </div>
-                    <section class="regular slider slideshow newsslide" >
-        <!-- <?php
-				try{
-					$db = getDb( $dsn, $usr, $passwd);
-					$sql = 'SELECT * FROM news';
-					$stt = $db->prepare($sql);
-					$stt->execute();
-					$result = $stt->fetchAll(PDO::FETCH_ASSOC);
-				?>
-                <div>
-                <?php foreach($result as $row): ?>
-                <a href="news_detail.php?id=<?= $row['id'] ?>" method="post">
-                <img src= "<?= 'image/' . $row['news_image'] ?>" alt="ランタン">
-                </a>
-                </div>
-                <?php endforeach; ?>         
-			<?php
-				}catch(PDOException $e){
-					die("接続エラー：{$e->getMessage()}");
-				}
-			?> -->
-
-
-
-                <div>
-                <a href="news_detail.php" method="post">
-                <img src="image/26155542_m.jpg" alt="びーる">
-                <p>2023年06月11日</p>
-                
-                </a>
-                </div>
-                <div>
-                <a href="news_detail.php" method="post">
-                <img src="image/26155548_s.jpg" alt="あじさい">
-                <p>2023年06月01日</p>
-                </a>
-                </div>
-                <div>
-                <a href="news_detail.php" method="post">
-                <img src="image/26230033_s.jpg" alt="ランニング">
-                <p>2023年05月05日</p>
-                </a>
-                </div>
-                <div>
-                <a href="news_detail.php" method="post">
-                <img src="image/27009191_m.jpg" alt="夜">
-                <p>2023年06月20日</p>
-                </a>
-                </div>
-                <div>
-                <a href="news_detail.php" method="post">
-                <img src="image/26882613_s.jpg" alt="家族">
-                <p>2023年06月11日</p>
-                </a>
-                </div>
-                <div>
-                <a href="news_detail.php" method="post">
-                <img src="image/27010370_s.jpg" alt="女性たち">
-                <p>2023年05月23日</p>
-                </a>
-                </div>
-            </section>
-                <div>
-      <!-- this slide should inherit the sizes attr from the parent slider -->
-      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
-    </div>
-  </section>
-     
-<div class="calendar-section" id="calendar_link">
+                    <div class="calendar-section" id="calendar_link">
 <h1>
-          <a href="?refYear=<?= $objPrevMonth->format('Y') ?>&refMonth=<?= $objPrevMonth->format('m') ?> " class="nav-link">前の月</a>
+          <a href="?refYear=<?= $objPrevMonth->format('Y') ?>&refMonth=<?= $objPrevMonth->format('m') ?> " class="nav-link">◀︎</a>
         <?= $thisYear . '年 / ' . $thisMonth . '月' ?>
         <!-- ナビゲーションリンク -->
-        <a href="?refYear=<?= $objNextMonth->format('Y') ?>&refMonth=<?= $objNextMonth->format('m') ?>" class="nav-link">次の月</a>
+        <a href="?refYear=<?= $objNextMonth->format('Y') ?>&refMonth=<?= $objNextMonth->format('m') ?>" class="nav-link">▶︎</a>
     </h1>
   <div class="calendar">
-    <h1>newsカレンダー</h1>
+    <h1>NEWS カレンダー</h1>
       <table>
         <tr>
           <!-- カレンダーの曜日の表示 -->
@@ -192,10 +156,7 @@ $newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </table>
   </div>
     </div>
-            </article>
-
-    
-
+    </section>
         </main>
         <footer class="footer">
         <div class="ft">
@@ -211,7 +172,7 @@ $newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
                 <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
                 <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="onlineshop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>

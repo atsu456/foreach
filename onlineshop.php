@@ -20,12 +20,20 @@ require_once 'foreach_config.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shop</title>
+    <title>onlineshop</title>
     <link href="css/slick.css" rel="stylesheet" />
   <link href="css/slick-theme.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+    </style>
 <body id="shop">
     <div id="container">
 
@@ -38,12 +46,33 @@ require_once 'foreach_config.php';
                 </ul>
             </nav>
         </header>
-
-<main>
-   <article>
-                        <h1 class="title-style">
-                            <p class="all_products">ALL PRODUCTS</p>
-                        </h1>
+        <main>
+<article>  
+                <section id="shop_slideshow" class="slideshow">
+                    <?php
+                    try{
+                      $db = getDb( $dsn, $usr, $passwd);
+                      $sql = 'SELECT * FROM slideshow';
+                      $stt = $db->prepare($sql);
+                      $stt->execute();
+                      $result = $stt->fetchAll(PDO::FETCH_ASSOC);          
+                    ?>
+                            <div id="slideshow">
+                            <img src="image/slideshow6.jpg" class="active">
+                            <?php foreach($result as $row): ?>
+                            <img src= "<?= 'image/' . $row['image'] ?>" alt="products_image">
+                          </a>
+                            <?php endforeach; ?>   
+                            </div>
+                  <?php
+                    }catch(PDOException $e){
+                      die("接続エラー：{$e->getMessage()}");
+                    }
+                  ?> 
+                </section>
+                        <h2 class="title-style">
+                            <p class="all_products">ONLINE SHOP</p>
+                        </h2>
     <div class="container">
     <?php
     try {
@@ -81,21 +110,14 @@ require_once 'foreach_config.php';
 			</div>
 
   </div>
-   </article>
-   
-</main>
-<?php
+  <?php
     } catch (PDOException $e) {
       echo 'エラー発生:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '<br>';
       exit;
     }
 ?>
-
-
-                </section>
-            </article>
-        </main>
-
+</article>
+</main>
         <footer class="footer">
         <div class="ft">
         <ul class="ft__ul">
@@ -129,10 +151,9 @@ require_once 'foreach_config.php';
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
         </footer>
-        
-        <script src="js/slick.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  	<link rel="stylesheet" href="<?php echo $path; ?>css/style.css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slideshow.js"></script>
+
 </body>
 </html>

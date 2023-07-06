@@ -8,10 +8,9 @@ if ($hierarchy_num > 1) {
   }
 }
 $page_title = '受注管理';
-require_once $path . 'header.php';
 require_once $path . 'func/functions.php';
 require_once $path . 'inc/inc_path.php';
-require_once 'foreach_config.php';
+require_once $path . 'foreach_config.php';
 try {
   $db = getDb($dsn, $usr, $passwd);
   $sql = 'SELECT id,name,image,is_deleted FROM products ORDER BY is_deleted,id';
@@ -28,7 +27,7 @@ try {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
 </head>
@@ -41,11 +40,10 @@ try {
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="onlineshop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
-
 <main>
     <div class="container container-narrow">
       <p class="centering">
@@ -106,7 +104,7 @@ try {
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
                 <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
                 <li class="ft_links_li"><a href="book.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="onlineshop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>

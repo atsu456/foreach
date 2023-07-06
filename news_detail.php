@@ -32,7 +32,7 @@ $id = $_GET['id'];
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="book.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="onlineshop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
@@ -48,13 +48,10 @@ $id = $_GET['id'];
 			$row = $stt->fetch(PDO::FETCH_ASSOC);
 		?>
 		<?php if ($row) { ?>
+            <h2><?= e($row['title']) ?></h2><br>
 			<img src= "<?= 'image/' . $row['news_image'] ?>" alt="">
-            <h1><?= e($row['title']) ?></h1>
-			<h3>日付</h3>
-			<?= e($row['topics_date']) ?>
-			<h3>詳細情報</h3>
-			<?= e($row['article']) ?>
-            
+            <p><?= print date("Y年m月d日", strtotime($row['topics_date'])) ?></p>
+			<p><?= e($row['article']) ?></p>   
 		<?php } else {
             echo 'newsが見つかりませんでした。';
         }
@@ -69,21 +66,21 @@ $id = $_GET['id'];
         <footer class="footer">
         <div class="ft">
         <ul class="ft__ul">
-        <li class="ft__logo"><a href="index.php"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
-        <li class="ft__add"><span class="ft__name">foreach camp&nbsp;ground</span></li>
+        <li class="ft__logo"><a href="#"><img src="image/camplogo.svg" alt="foreach campground"></a></li>
+        <li class="ft__add"><span class="ft__name">foreach camp ground</span></li>
         <li class="ft__add">〒888-8888</li>
         <li class="ft__add">福岡県福岡市東区888-88</li>
         <li class="ft__add">0493-81-6166</li>
         </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="access.php">アクセス</a></li>
+                <li class="ft_links_li"><a href="#">アクセス</a></li>
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
-                <li class="ft_links_li"><a href="facility">施設紹介</a></li>
-                <li class="ft_links_li"><a href="book.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
+                <li class="ft_links_li"><a href="reserve.php">予約</a></li>
+                <li class="ft_links_li"><a href="onlineshop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
-                <li class="ft_links_li"><a href="#">会社概要・拠点情報</a></li>
+                <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
                 <li class="ft_links_li"><a href="#">事業情報</a></li>
                 <li class="ft_links_li"><a href="#">採用情報</a></li>
                 <li class="ft_links_li"><a href="#">個人情報保護方針</a></li>
