@@ -82,7 +82,7 @@ require_once 'func/functions.php';
         </tbody>
       </table>
       <div class="cart__btn-group centering">
-        <a href="all_products.php" class="btn btn-secondary">お買い物を続ける</a>
+        <a href="onlineshop.php" class="btn btn-secondary">お買い物を続ける</a>
         <a href="order.php" class="btn btn-primary">購入手続きへ進む</a>
       </div>
     </section>

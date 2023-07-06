@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once 'inc/inc_path.php';
+require_once 'func/func.php';
+require_once 'foreach_config.php';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -6,6 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
@@ -19,7 +28,7 @@
             <nav id="g-nav">
                 <ul class="nav">
                     <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="shop.php">オンラインショップ</a></li>
+                    <li class="g-nav__item"><a href="onlineshop.php">オンラインショップ</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,27 +42,16 @@
                         <p class="mv__lead">QUIET PLACE<br>AND THE<br>STARRY SKY</p>
                     </div>
                 </section>
-
                 <section id="news01" class="contents">
-                    <div class="news_page_description">
+                    <div class="page_description">
                         <h2 class="title-style">
                             01
                             <p class="title-border-right">NEWS</p>
                         </h2>
                         <p>イベント情報など<br>最新の情報をお届けいたします。</p>
                         <a href="news.php" class="btn">READ MORE</a>
-                    </div>
-                    <ul class="news__item">
-                        <li><a href="news_detail.php">
-                                <figure class="img"><img src="image/rantan.jpg" alt="ランタン"></figure>
-                            </a></li>
-                        <li><a href="news_detail.php">
-                                <figure class="img"><img src="image/cup.jpg" alt="マグカップ"></figure>
-                            </a></li>
-                        <li><a href="news_detail.php">
-                                <figure class="img"><img src="image/fire.jpg" alt="焚き火"></figure>
-                            </a></li>
-                    </ul>
+                     </div>
+                        <figure class="contents_img"><img src="image/news.jpg" alt="NEWS"></figure>
                 </section>
 
                 <section id="facility02" class="contents">
@@ -75,7 +73,7 @@
                             <p class="title-border-right">ONLINE SHOP</p>
                         </h2>
                         <p>キャンプギア、アパレル用品の購入はこちらから！<br>限定商品も取り扱っていますので<br>是非ご覧ください。</p>
-                        <a href="shop.php" class="btn">READ MORE</a>
+                        <a href="onlineshop.php" class="btn">READ MORE</a>
                         </div>
                         <figure class="contents_img"><img src="image/mug.jpg" alt="マグカップ"></figure>
                 </section>
@@ -109,7 +107,7 @@
                 <li class="ft_links_li"><a href="news.php">お知らせ</a></li>
                 <li class="ft_links_li"><a href="facility.php">施設紹介</a></li>
                 <li class="ft_links_li"><a href="reserve.php">予約</a></li>
-                <li class="ft_links_li"><a href="shop.php">オンラインストア</a></li>
+                <li class="ft_links_li"><a href="onlineshop.php">オンラインストア</a></li>
             </ul>
             <ul class="ft_links_ul">
                 <li class="ft_links_li"><a href="contact.php">お問い合わせ</a></li>
@@ -128,6 +126,10 @@
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
         </footer>
+        <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
 
 </html>
