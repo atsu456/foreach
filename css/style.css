@@ -632,7 +632,7 @@ reserve
   margin: 20px 0;
 }
 
-#reserve .button_reserve a {
+#reserve .button_reserve button {
   /* 購入ボタン */
   background: #eee;
   border-radius: 3px;
@@ -649,7 +649,7 @@ reserve
   border: solid 1px #313131;
 }
 
-#reserve .button_reserve a:after {
+#reserve .button_reserve button:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -667,12 +667,12 @@ reserve
   transform: translateY(-50%) rotate(45deg);
 }
 
-#reserve .button_reserve a:hover {
+#reserve .button_reserve button:hover {
   background: #009456;
   color: #FFF;
 }
 
-#reserve .button_reserve a:hover:after {
+#reserve .button_reserve button:hover:after {
   right: 1.4rem;
 }
 

@@ -1,3 +1,17 @@
+<?php
+require_once 'inc/inc_path.php';
+require_once 'func/func.php';
+require_once 'foreach_config.php';
+    // フォームデータの受け取り
+    $date = $_POST['date'];
+    $stay = $_POST['stay'];
+    $adult = $_POST['adult'];
+    $child = $_POST['child'];
+    $campsite = $_POST['campsite'];
+
+
+    $date2 = (explode('-', $date));
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,6 +23,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body id="reserve_form">
     
@@ -23,52 +38,53 @@
         </header>
     <main>
         <article>
-        <h1>予約フォーム</h1>
+        
+        <form action="reserve" method="post">
+        <h1>予約サイト情報</h1>
+            <p><label for="date">到着日　:　<?=  $date2[0] . '年' . $date2[1] . '月' . $date2[2] . '日' ?></label>
+            <input type="hidden" id="date" name="date" value="<?= $date ?>"></p>
+            
+            <p><label for="stay">宿泊数　:　<?= $stay ?>人</label>
+            <input type="hidden" id="stay" name="stay" value="<?= $stay ?>"></p>
+            
+            <p><label for="adult">大人　:　<?= $adult ?>人</label>
+            <input type="hidden" id="adult" name="adult" value="<?= $adult ?>"></p>
 
-        <form action="/reserve" method="post">
-        <label for="name">氏名:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="phone">電話番号:</label>
-        <input type="tel" id="phone" name="phone">
-        
-        <label for="arrival">到着日:</label>
-        <input type="date" id="arrival" name="arrival" required>
-        
-        <label for="departure">出発日:</label>
-        <input type="date" id="departure" name="departure" required>
-        
-        <label for="number_of_people">人数:</label>
-        <input type="number" id="number_of_people" name="number_of_people" required>
-        
-        <label for="site_type">サイトタイプ:</label>
-        <select id="site_type" name="site_type">
-            <option value="free">フリーサイト(電源なし)</option>
-            <option value="auto">区画電源オートサイト(電源あり)</option>
-            <option value="solo">ソロキャンプサイト(電源なし)</option>
-        </select>
-        
-        <label for="additional_options">追加オプション:</label>
-        火起こしセット
-        <input type="checkbox" id="fire_kit" name="additional_options" value="fire_kit">
-        椅子
-        <input type="checkbox" id="chair" name="additional_options" value="chair">
-        
-        <label for="special_requests">特別な要求:</label>
-        <textarea id="special_requests" name="special_requests"></textarea>
-        
-        <button type="submit">予約</button>
-    </form>
+            <p><label for="child">子供　:　<?= $child ?>人</label>
+            <input type="hidden" id="child" name="child" value="<?= $child ?>"></p>
+            
+            <p><label for="campsite">キャンプサイトの種類　:　<?= $campsite ?></label>
+            <input type="hidden" id="campsite" name="campsite" value="<?= $campsite ?>"></p>
+        </form>
+    
+        <form action="reserve" method="post">
+        <h1>代表者様のご連絡先</h1><br>
+            <label for="name_kanji">氏名（漢字）:</label>
+            <input type="text" id="name_kanji" name="name_kanji" required><br>
 
+            <label for="name_kana">氏名（カナ）:</label>
+            <input type="text" id="name_kana" name="name_kana" required><br>
 
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required><br>
 
+            <label for="tell">当日ご連絡のつく電話番号:</label>
+            <input type="tel" id="tell" name="tell" required><br>
 
+            <label for="postcode">郵便番号:</label>
+            <input type="text" id="postcode" name="postcode" class="search" maxlength="7" required ><br>
 
+            <label for="prefecture">都道府県:</label>
+            <input type="text" id="prefecture" name="prefecture" required><br>
 
+            <label for="address">住所:</label>
+            <input type="text" id="address" name="address" required><br>
 
+            <label for="birthdate">生年月日:</label>
+            <input type="date" id="birthdate" name="birthdate" required><br>
+            
+            <button type="submit">確認する</button>
+        </form>
         </article>
     </main>
         <footer class="footer">
@@ -104,5 +120,13 @@
             </div>
             <div class="ft_copyright">©2023 foreach campground</div>
         </footer>
+        <script>
+    function showSelectedDate(date) {
+//        document.getElementById('selectedDateContainer').textContent = date;
+document.getElementById('date').value = date;
+          // ここで選択された日付を他の要素に表示する処理を行う
+    }
+</script>
+<script src="js/app.js"></script>
 </body>
 </html>
