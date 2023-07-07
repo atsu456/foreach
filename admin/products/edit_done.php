@@ -3,9 +3,9 @@ session_start();
 $path = '';
 $hierarchy_num = array_key_last(explode('/', dirname($_SERVER['PHP_SELF'])));
 if ($hierarchy_num > 1) {
-  for ($cnt_path = $hierarchy_num; $cnt_path > 1; $cnt_path--) {
-    $path .= '../';
-  }
+	for ($cnt_path = $hierarchy_num; $cnt_path > 1; $cnt_path--) {
+		$path .= '../';
+	}
 }
 $id = (int)$_POST['id'];
 $name = $_POST['name'];

@@ -26,17 +26,31 @@ $id = (int)$_POST['id'];//一覧画面から送信されたIDを受け取る
 
 <body id="top">
     <div id="container">
-
-        <header class="header">
-            <h1 class="header__logo"><a href="#"><img src="../../image/camplogo.svg" alt="foreach campground"></a></h1>
-            <nav id="g-nav">
-                <ul class="nav">
-                    <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="#">オンラインショップ</a></li>
+    <header class="header">
+            <h1 class="header__logo"><a href="../../index.php"><img src="../../image/camplogo.svg" alt="foreach campground"></a></h1>
+            <div class="t-nav">
+                <nav id="g-nav">
+                    <ul class="nav">
+                        <li class="g-nav__item"><a href="../../reserve.php">予約</a></li>
+                        <li class="g-nav__item"><a href="../../onlineshop.php">オンラインショップ</a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger-menu" id="js-hamburger-menu">
+                    <span class="hamburger-menu__bar"></span>
+                    <span class="hamburger-menu__bar"></span>
+                    <span class="hamburger-menu__bar"></span>
+                </button>
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__list-item"><a href="../../news.php" class="navigation__link">NEWS</a></li>
+                    <li class="navigation__list-item"><a href="../../facility.php" class="navigation__link">FACILITY</a></li>
+                    <li class="navigation__list-item"><a href="../../onlineshop.php" class="navigation__link">ONLINE SHOP</a></li>
+                    <li class="navigation__list-item"><a href="../../access.php" class="navigation__link">ACCESS</a></li>
+                    <li class="navigation__list-item"><a href="../../contact.php" class="navigation__link">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
-
         <main class="admin_main">
 		<article id="admin">
 			<h1>削除：お問い合わせの種類</h1>

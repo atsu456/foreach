@@ -28,15 +28,7 @@ $id = (int)$_POST['id'];
 <body id="top">
     <div id="container">
 
-        <header class="header">
-            <h1 class="header__logo"><a href="#"><img src="../image/camplogo.svg" alt="foreach campground"></a></h1>
-            <nav id="g-nav">
-                <ul class="nav">
-                    <li class="g-nav__item"><a href="reserve.php">予約</a></li>
-                    <li class="g-nav__item"><a href="onlineshop.php">オンラインショップ</a></li>
-                </ul>
-            </nav>
-        </header>
+        <?php require_once('header.html'); ?>
 
         <main class="admin_main">
             <article id="admin">
