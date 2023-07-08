@@ -1431,10 +1431,47 @@ accsess
   margin: 0;
 }
 
+#access__add {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.access__li {
+  margin: 20px 0;
+}
+
+.access__li:first-child {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 #car {
   text-align: center;
 }
 
+.access_img {
+  width: 807px;
+  height: 629px;
+  margin: 100px auto 30px auto;
+}
+
+#point {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.point {
+  font-size: 50px;
+}
+
+.small {
+  font-size: 30px;
+}
+
+.access_big {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
 /*--------------------------------
 contact
@@ -1594,4 +1631,10 @@ admin
 
 .add {
   margin: 30px 0;
+}
+
+@media (max-width:767px) {
+
+/* top */
+
 }
