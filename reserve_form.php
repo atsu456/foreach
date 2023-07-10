@@ -19,7 +19,7 @@ $date2 = (explode('-', $date));
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>news</title>
+    <title>reserve</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/pke3ujd.css">
     <script src="https://kit.fontawesome.com/0fb73e8725.js" crossorigin="anonymous"></script>
@@ -31,30 +31,29 @@ $date2 = (explode('-', $date));
     <main>
         <article>
 
-            <form action="reserve" method="post">
+            <form>
                 <h1>予約サイト情報</h1>
                 <p><label for="date">到着日　:　<?= $date2[0] . '年' . $date2[1] . '月' . $date2[2] . '日' ?></label>
-                    <input type="hidden" id="date" name="date" value="<?= $date ?>">
                 </p>
-
                 <p><label for="stay">宿泊数　:　<?= $stay ?>人</label>
-                    <input type="hidden" id="stay" name="stay" value="<?= $stay ?>">
                 </p>
-
                 <p><label for="adult">大人　:　<?= $adult ?>人</label>
-                    <input type="hidden" id="adult" name="adult" value="<?= $adult ?>">
                 </p>
-
                 <p><label for="child">子供　:　<?= $child ?>人</label>
-                    <input type="hidden" id="child" name="child" value="<?= $child ?>">
                 </p>
-
                 <p><label for="campsite">キャンプサイトの種類　:　<?= $campsite ?></label>
-                    <input type="hidden" id="campsite" name="campsite" value="<?= $campsite ?>">
                 </p>
             </form>
 
-            <form action="reserve" method="post">
+            <form action="reserve_confirm.php" method="post" >
+
+            <input type="hidden" id="date" name="date" value="<?= $date ?>">
+            <input type="hidden" id="stay" name="stay" value="<?= $stay ?>">
+            <input type="hidden" id="adult" name="adult" value="<?= $adult ?>">
+            <input type="hidden" id="child" name="child" value="<?= $child ?>">
+            <input type="hidden" id="campsite" name="campsite" value="<?= $campsite ?>">
+
+
                 <h1>代表者様のご連絡先</h1><br>
                 <label for="name_kanji">氏名（漢字）:</label>
                 <input type="text" id="name_kanji" name="name_kanji" required><br>
