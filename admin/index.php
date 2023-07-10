@@ -55,6 +55,7 @@ require_once '../func/func.php';
                     <li><a href="users/">管理：ユーザ</a></li>
                     <li><a href="contact/">管理：お問い合わせ</a></li>
                     <li><a href="types/">管理：お問い合わせ種類</a></li>
+                    <li><a href="news/">管理：ニュース</a></li>
                     <li><a href="orders/">管理：受注管理</a></li>
                     <li><a href="products/">管理：商品管理</a></li>
                     <li><a href="reserve/">管理：予約者情報</a></li>
