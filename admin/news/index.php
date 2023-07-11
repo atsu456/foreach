@@ -80,15 +80,15 @@ require_once 'foreach_config.php';
                             <td class="adminOperation">
                                     <form action="show.php" method="post">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                                        <input class="adminBtn" type="submit" value="詳細">
+                                        <input  type="submit" value="詳細">
                                     </form>
                                     <form action="edit.php" method="post">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                                        <input class="adminBtn" type="submit" value="編集">
+                                        <input  type="submit" value="編集">
                                     </form>
                                     <form action="delete.php" method="post">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                                        <input class="adminBtn" type="submit" value="削除">
+                                        <input  type="submit" value="削除">
                                     </form>
                                 </td>
                             </tr>

@@ -69,7 +69,7 @@ $id = (int)$_POST['id'];
 					//複数件データを取得する場合はfetchAll（二次元配列）	
 					$result2 = $stt2->fetchAll(PDO::FETCH_ASSOC);
 				?>
-				<div class="dmin">
+				<div class="admin">
 					<dl>
 						<dt>ID</dt>
 						<dd><?= $result['id'] ?></dd>
