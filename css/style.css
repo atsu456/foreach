@@ -507,8 +507,8 @@ facility shop access 共通
 
 .page_description {
   width: 424px;
-  height: 576px;
-  padding-top: 150px;
+  height: clamp(18.75rem, -3.338rem + 46.08vw, 36rem);
+  padding-top: clamp(0rem, -12.004rem + 25.04vw, 9.375rem);
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -959,6 +959,9 @@ facility
 
 #facility #copy {
   margin-bottom: 0;
+  letter-spacing: 0.5em;
+  line-height: 50px;
+  font-size: clamp(0.75rem, 0.43rem + 0.67vw, 1rem);
 }
 
 #facility article {
@@ -986,6 +989,7 @@ facility
   padding: 20px;
   border-bottom: 1px solid #000;
   border-right: 1px solid #000;
+  font-size: clamp(0.75rem, 0.43rem + 0.67vw, 1rem);
 }
 
 #facility .service th {
@@ -1658,6 +1662,7 @@ admin
   /* nav */
 
   .header {
+    width: 100%;
     height: 130px;
     padding: 50px;
   }
@@ -1690,7 +1695,8 @@ admin
   #top .contents {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;  
+    margin-bottom: 50px;
+    padding: 0 20px;
   }
 
   .contents_img {
@@ -1698,9 +1704,58 @@ admin
   }
 
   .page_description {
-    height: 300px;
+    width: 100%;
     margin: 20px 0;
     padding: 0;
   }
+
+  /* facility */
+
+  #facility article td {
+    text-align: left;
+  }
+
+  #facility .facility_tb {
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  #facility .facility_tb caption,
+  .map {
+    margin-top: 100px;
+  }
+  
+  #facility .facility_tb th,
+  #facility .facility_tb td {
+    padding: 20px 10px;
+  }
+  
+  #facility .service th {
+    width: 100px;
+  }
+    
+  #facility .list td {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  #facility #copy {
+    line-height: 30px;
+  }
+  
+/* access */
+
+  .access_img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* contact */
+
+  #contact textarea {
+    width: 100%;
+  }
+  
+  
   
 }
