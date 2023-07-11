@@ -58,10 +58,11 @@ $name = e($_POST['name']);
                         <dt><label for="name">項目名</label></dt>
                         <dd><?= $name ?><input type="hidden" name="name" id="name" value="<?= $name ?>"></dd>
                     </dl>
-                    <p>
+                    <div class="adminBtn">
                         <input type="submit" value="登録する">
                         <input type="button" value="戻る" onclick="history.back()">
-                    </p>
+                    </div>
+                    
                 </form>
             </article>
         </main>

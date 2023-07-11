@@ -71,7 +71,9 @@ $id = (int)$_POST['id'];
                             <dt>メールアドレス</dt>
                             <dd><?= $result['email'] ?></dd>
                         </dl>
-                        <p><input type="button" value="戻る" onclick="history.back()"></p>
+                        <div class="adminBtn">
+                            <input type="button" value="戻る" onclick="history.back()">
+                        </div>
                     </div>
                 <?php
                 } catch (PDOException $e) {

@@ -47,7 +47,7 @@ require_once '../func/func.php';
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="admin_main">
             <article>
                 <h1>ログイン</h1>
                 <p class="msg">
@@ -63,7 +63,7 @@ require_once '../func/func.php';
                         <dt><label for="password">パスワード</label></dt>
                         <dd><input type="password" name="password" id="password" required></dd>
                     </dl>
-                    <div class="loginBtn">
+                    <div class="adminBtn">
                         <input type="submit" value="ログイン">
                         <input type="reset" value="リセット">
                     </div>

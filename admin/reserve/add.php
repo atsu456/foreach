@@ -85,10 +85,10 @@ require_once 'foreach_config.php';
                     <dt>生年月日</dt>
                     <dd><input type="date" name="birthdate" required></dd>
                 </dl>
-                    <p>
+                <div class="adminBtn">
                         <input type="submit" value="確認する">
                         <input type="reset" value="リセット">
-                    </p>
+                </div>
                 </form>
             </article>
         </main>

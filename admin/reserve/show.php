@@ -94,7 +94,10 @@ $id = (int)$_POST['id'];
                             <dt>生年月日</dt>
                             <dd><?= $result['birthdate'] ?></dd>
                         </dl>
-                        <p><input type="button" value="戻る" onclick="history.back()"></p>
+                        <div class="adminBtn">
+                            <input type="button" value="戻る" onclick="history.back()">
+                        </div>
+                        
                     </div>
                 <?php
                 } catch (PDOException $e) {

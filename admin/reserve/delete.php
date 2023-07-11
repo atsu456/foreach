@@ -83,7 +83,7 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
                             <dt>電話番号</dt>
                             <dd><?= $result['tell'] ?></dd>
                             <dt>郵便番号</dt>
-                            <dd><?= $result['postal_code'] ?></dd>
+                            <dd><?= $result['postcode'] ?></dd>
                             <dt>都道府県</dt>
                             <dd><?= $result['prefecture'] ?></dd>
                             <dt>住所</dt>
@@ -92,11 +92,11 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
                             <dd><?= $result['birthdate'] ?></dd>
                         </dl>
 						<form action="delete_done.php" method="post">
-							<p>
+						<div class="adminBtn">
 								<input type="hidden" name="id" value="<?= $result['id'] ?>">
 								<input type="submit" value="削除">
 								<input type="button" value="戻る" onclick="history.back()">
-							</p>
+						</div>
 						</form>
 					</div>
 				<?php

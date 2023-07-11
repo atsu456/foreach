@@ -93,11 +93,11 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
 							<dt><label for="comment">お問い合わせ内容</label></dt>
 							<dd><textarea name="comment" id="comment"><?= $result['comment'] ?></textarea> </dd>
 						</dl>
-						<p>
+						<div class="adminBtn">
 							<input type="submit" value="編集">
 							<input type="hidden" name="contact_number" value="<?= $result['contact_number'] ?>">
 							<input type="button" value="戻る" onclick="history.back()">
-						</p>
+						</div>
 					</form>
 					</div>
 				<?php

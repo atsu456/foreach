@@ -81,11 +81,11 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
                                     <input type="password" name="password" id="password">
                                 </dd>
                             </dl>
-                            <p>
+                            <div class="adminBtn">
                                 <input type="hidden" name="id" id="id" value="<?= $result['id'] ?>">
                                 <input type="submit" value="編集する">
                                 <input type="button" value="戻る" onclick="history.back()">
-                            </p>
+                            </div>
                         </form>
                     </div>
                 <?php

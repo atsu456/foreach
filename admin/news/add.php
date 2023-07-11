@@ -68,10 +68,10 @@ require_once 'foreach_config.php';
 					<dd><img id="preview" src="data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7" alt="">
               		<input type="file" name="news_image" id="news_image"></dd>
                     </dl>
-                    <p>
+                    <div class="adminBtn">
                         <input type="submit" value="確認する">
                         <input type="reset" value="リセット">
-                    </p>
+                    </div>
                 </form>
             </article>
         </main>

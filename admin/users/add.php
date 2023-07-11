@@ -60,10 +60,10 @@ require_once 'foreach_config.php';
                         <dt><label for="password">パスワード</label></dt>
                         <dd><input type="password" name="password" id="password" required></dd>
                     </dl>
-                    <p>
+                    <div class="adminBtn">
                         <input type="submit" value="確認する">
                         <input type="reset" value="リセット">
-                    </p>
+                    </div>
                 </form>
             </article>
         </main>

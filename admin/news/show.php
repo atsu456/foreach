@@ -77,7 +77,9 @@ $id = (int)$_POST['id'];
                             <dt>image</dt>
                             <dd><?= $result['news_image'] ?></dd>
                         </dl>
-                        <p><input type="button" value="戻る" onclick="history.back()"></p>
+                        <div class="adminBtn">
+                        <input type="button" value="戻る" onclick="history.back()">
+                        </div>
                     </div>
                 <?php
                 } catch (PDOException $e) {

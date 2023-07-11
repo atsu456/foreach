@@ -79,11 +79,11 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
 
 						</dl>
 						<form action="delete_done.php" method="post">
-							<p>
+						<div class="adminBtn">
 								<input type="hidden" name="id" value="<?= $result['id'] ?>">
-								<input type="submit" value="削除">
+								<input type="submit" value="削除する">
 								<input type="button" value="戻る" onclick="history.back()">
-							</p>
+						</div>
 						</form>
 					</div>
 				<?php

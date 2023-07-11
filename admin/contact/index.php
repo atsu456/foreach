@@ -69,7 +69,7 @@ require_once 'foreach_config.php';
                             <tr>
                                 <td><?= $row['id'] ?></td>
                                 <td><?= e($row['name']) ?></td>
-                                <td>
+                                <td class="adminOperation">
                                     <form action="show.php" method="post">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                         <input type="submit" value="詳細">
@@ -86,7 +86,10 @@ require_once 'foreach_config.php';
                             </tr>
 
                         <?php endforeach; ?>
-                    </table class="admin_tb">
+                    </table>
+                    <div class="adminBtn">
+                            <input type="button" value="戻る" onclick="history.back()">
+                    </div>
                 <?php
                 } catch (PDOException $e) {
                     die("接続エラー：{$e->getMessage()}");

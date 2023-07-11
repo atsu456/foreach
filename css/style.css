@@ -1524,6 +1524,9 @@ textarea {
 /*--------------------------------
 admin
 ----------------------------------*/
+
+/* 受注管理？*/
+
 .admin-btn-list {
   display: flex;
   flex-direction: column;
@@ -1604,13 +1607,27 @@ admin
   margin: 30px;
 }
 
+/* admin修正箇所 */
+
+.admin_main{
+  max-width: 1166px;
+  margin: 50px auto;
+  padding: 20px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 10px;
+}
 .admin dt,
 .admin dd {
   line-height: 2em;
   padding: 10px;
-  border-top: 1px solid #bbb;
-  border-right: 1px solid #bbb;
-  margin: 0;
+  border: 1px solid var(--black);
+}
+
+.adminBtn{
+  display: flex;
+  gap: 10px;
+  margin: 20px;
 }
 
 .admin_tb {
@@ -1620,18 +1637,17 @@ admin
 
 .admin_tb th,
 .admin_tb td {
-  padding: 15px;
-  border: 1px solid #775644;
-}
-
-.admin_tb tr th:first-child {
-  width: 30%;
-}
-
-.admin_tb tr td:nth-child(2),
-.admin_tb tr td:nth-child(3) {
+  padding: 10px;
+  border: 1px solid var(--black);
   text-align: center;
 }
+.admin_tb .adminOperation{
+  min-width: 150px;
+}
+/* .admin_tb tr th:first-child {
+  width: 30%;
+} */
+
 
 .add {
   margin: 30px 0;

@@ -77,7 +77,7 @@ require_once 'foreach_config.php';
                             <td><?= $row['topics_date'] ?></td>
                             <td><?= $row['article'] ?></td>
                             <td><?= $row['news_image'] ?></td>
-                                <td>
+                            <td class="adminOperation">
                                     <form action="show.php" method="post">
                                         <input type="hidden" name="id" value="<?= $row['id'] ?>">
                                         <input class="adminBtn" type="submit" value="詳細">
@@ -94,6 +94,9 @@ require_once 'foreach_config.php';
                             </tr>
                         <?php endforeach; ?>
                     </table>
+                    <div class="adminBtn">
+                            <input type="button" value="戻る" onclick="history.back()">
+                    </div>
                 <?php
                 } catch (PDOException $e) {
                     die("接続エラー：{$e->getMessage()}");

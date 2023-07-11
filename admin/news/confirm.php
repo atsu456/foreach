@@ -74,11 +74,11 @@ $topics_array = explode('-',$topics_date);
 					<dt>image</dt>
 					<dd><img src= "<?= '../../image/' . $news_image ?>" alt=""><input type="hidden" name="news_image" value="<?= $news_image ?>"></dd>
                 </dl>
-                    <p>
+                <div class="adminBtn">
                         <input type="hidden" name="password" value="<?= $password ?>">
                         <input type="submit" value="送信する">
                         <input type="button" value="戻る" onclick="history.back()">
-                    </p>
+                </div>
                 </form>
             </article>
         </main>

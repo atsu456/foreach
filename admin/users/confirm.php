@@ -62,11 +62,11 @@ $password = e($_POST['password']);
                         <dt>メールアドレス</dt>
                         <dd><?= $email ?><input type="hidden" name="email" value="<?= $email ?>"></dd>
                     </dl>
-                    <p>
+                    <div class="adminBtn">
                         <input type="hidden" name="password" value="<?= $password ?>">
                         <input type="submit" value="送信する">
                         <input type="button" value="戻る" onclick="history.back()">
-                    </p>
+                    </div>
                 </form>
             </article>
         </main>

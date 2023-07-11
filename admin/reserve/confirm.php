@@ -100,11 +100,10 @@ $birthdate = $_POST['birthdate'];
                     <dt>生年月日</dt>
                     <dd><?= $_POST['birthdate'] ?></dd>
                 </dl>
-                    <p>
-                        <input type="hidden" name="password" value="<?= $password ?>">
+                <div class="adminBtn">
                         <input type="submit" value="送信する">
                         <input type="button" value="戻る" onclick="history.back()">
-                    </p>
+                </div>
                 </form>
             </article>
         </main>
