@@ -680,15 +680,17 @@ news
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .news_description .description {
   font-size: 1rem;
   margin-top: 60px;
+  padding: 0 20px;
 }
 
 #news .calendar-section {
-  margin: 0;
+  margin: 20px;
 }
 
 /*--------------------------------
@@ -1034,6 +1036,7 @@ shop
 #shop .item__image img {
   width: 300px;
   height: 200px;
+  margin: 0 auto;
   object-fit: cover;
 }
 
@@ -1318,13 +1321,6 @@ shop
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  #shop .form-item {
-    flex-direction: row;
-    gap: 2rem;
-  }
-}
-
 #shop .form-item>*:nth-child(1) {
   flex-basis: 30%;
 }
@@ -1414,7 +1410,6 @@ shop
   width: 100px;
   height: 50px;
   line-height: 10px;
-
 }
 
 .ta_c {
@@ -1494,7 +1489,7 @@ contact
   width: 200px;
 }
 
-#contact input[type="email"] {
+#contact input[type="tel"] {
   width: 300px;
 }
 
@@ -1513,6 +1508,7 @@ contact
 #contact input,
 textarea {
   margin-top: 7px;
+  color: #000;
 }
 
 #contact textarea {
@@ -1523,6 +1519,10 @@ textarea {
 
 .contact_end {
   margin: 30px;
+}
+
+.contact_btn {
+  color: #000;
 }
 
 /*--------------------------------
@@ -1613,7 +1613,7 @@ admin
 
 /* admin修正箇所 */
 
-.admin_main{
+.admin_main {
   max-width: 1166px;
   margin: 50px auto;
   padding: 20px;
@@ -1621,6 +1621,7 @@ admin
   background-color: var(--white);
   border-radius: 10px;
 }
+
 .admin dt,
 .admin dd {
   line-height: 2em;
@@ -1628,7 +1629,7 @@ admin
   border: 1px solid var(--black);
 }
 
-.adminBtn{
+.adminBtn {
   display: flex;
   gap: 10px;
   margin: 20px;
@@ -1645,9 +1646,11 @@ admin
   border: 1px solid var(--black);
   text-align: center;
 }
-.admin_tb .adminOperation{
+
+.admin_tb .adminOperation {
   min-width: 150px;
 }
+
 /* .admin_tb tr th:first-child {
   width: 30%;
 } */
@@ -1675,20 +1678,20 @@ admin
     display: none;
   }
 
-    /* footer */
+  /* footer */
 
   .footer {
     padding: 20px;
   }
-  
+
   .ft {
     flex-direction: column;
   }
-      
+
   .ft_snsLinks_ul {
     justify-content: center;
     font-size: 30px;
-  }  
+  }
 
   /* top */
 
@@ -1719,21 +1722,21 @@ admin
     width: 90%;
     margin: 10px auto;
   }
-  
+
   #facility .facility_tb caption,
   .map {
     margin-top: 100px;
   }
-  
+
   #facility .facility_tb th,
   #facility .facility_tb td {
     padding: 20px 10px;
   }
-  
+
   #facility .service th {
     width: 100px;
   }
-    
+
   #facility .list td {
     padding: 20px;
     padding-top: 0;
@@ -1742,8 +1745,8 @@ admin
   #facility #copy {
     line-height: 30px;
   }
-  
-/* access */
+
+  /* access */
 
   .access_img {
     width: 100%;
@@ -1755,7 +1758,27 @@ admin
   #contact textarea {
     width: 100%;
   }
-  
-  
-  
+
+  /* shop */
+
+  #shop .form-item {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #shop .item {
+    text-align: center;
+  }
+
+  /* reserve */
+
+#reserve .section_reserve {
+  width: 100%;
+  flex-direction: column;
+}
+
+#reserve .section_left, #reserve .section_right {
+  width: 100%;
+}
+
 }

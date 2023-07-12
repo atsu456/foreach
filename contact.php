@@ -36,7 +36,7 @@ require_once 'list/list.php';
                     <p class="contactForm_p"><label>お問い合わせの内容<br>
                             <textarea name="comment"></textarea></label></p>
                     <p class="contactForm_p">
-                        <input type="submit" value="確認する">
+                        <input class="contact_btn" type="submit" value="確認する">
                     </p>
                 </form>
             </article>
