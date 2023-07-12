@@ -1531,7 +1531,7 @@ admin
 
 /* 受注管理？*/
 
-.admin-btn-list {
+/* .admin-btn-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1609,7 +1609,7 @@ admin
   display: grid;
   grid-template-columns: 30% 1fr;
   margin: 30px;
-}
+} */
 
 /* admin修正箇所 */
 
@@ -1647,8 +1647,11 @@ admin
   text-align: center;
 }
 
-.admin_tb .adminOperation {
+.admin_tb .adminOperation{
   min-width: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* .admin_tb tr th:first-child {
