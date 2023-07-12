@@ -86,7 +86,7 @@ $id = (int)$_POST['id'];
                             <dt>電話番号</dt>
                             <dd><?= $result['tell'] ?></dd>
                             <dt>郵便番号</dt>
-                            <dd><?= $result['postal_code'] ?></dd>
+                            <dd><?= $result['postcode'] ?></dd>
                             <dt>都道府県</dt>
                             <dd><?= $result['prefecture'] ?></dd>
                             <dt>住所</dt>
