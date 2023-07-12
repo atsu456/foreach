@@ -95,7 +95,7 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
 						<div class="adminBtn">
 								<input type="hidden" name="id" value="<?= $result['id'] ?>">
 								<input type="submit" value="削除">
-								<a href="../"><input type="button" value="戻る"></a>
+								<input type="button" value="戻る" onclick="history.back()">
 						</div>
 						</form>
 					</div>

@@ -90,7 +90,7 @@ require_once 'foreach_config.php';
                         <?php endforeach; ?>
                     </table>
                     <div class="adminBtn">
-                            <input type="button" value="戻る" onclick="history.back()">
+                    <a href="../"><input type="button" value="戻る"></a>
                     </div>
                     
                 <?php
