@@ -96,7 +96,9 @@ $id = (int)$_POST['id'];
 						<dd><?= nl2br(e($result['comment'])) ?></dd>
 					</dl>
 					</div>
-					<p><input type="button" value="戻る" onclick="history.back()"></p>
+					<div class="adminBtn">
+						<input type="button" value="戻る" onclick="history.back()">
+					</div>
 				<?php
 				} catch (PDOException $e) {
 					die("接続エラー：{$e->getMessage()}");

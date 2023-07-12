@@ -52,7 +52,8 @@ try {
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="admin_main">
+      <article id="admin">
         <div class="container container-narrow">
           <p class="centering">
             <span>
@@ -64,7 +65,8 @@ try {
               ?>
             </span>
           </p>
-          <table class="admin-table ta_c">
+          <!-- <table class="admin-table ta_c"> -->
+          <table class="admin_tb">
             <thead>
               <tr>
                 <th>商品ID</th>
@@ -78,25 +80,41 @@ try {
                   <td><?php echo $item['id']; ?></td>
                   <td> <?php echo ($item['name']); ?>
                   </td>
-                  <td>
-                    <p class="centering">
-                      <a class="btn btn-menu" href="detail.php?id=<?php echo $item['id'] ?>">詳細</a>
-                      <a class="btn btn-menu" href="edit.php?id=<?php echo $item['id'] ?>">編集</a>
-                    </p>
+                  <td class="adminOperation">
+                    <!-- <p class="centering"> -->
+                      <a href="detail.php?id=<?php echo $item['id'] ?>">
+                      <input type="submit" value="詳細">
+                      </a>
+                      <a href="edit.php?id=<?php echo $item['id'] ?>">
+                        <input type="submit" value="編集">
+                      </a>
+                    <!-- </p> -->
                   </td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-          <p class="centering"><a href="../" class="btn btn-secondary">戻る</a><a href="add.php" class="btn btn-primary">新規登録</a></p>
+          <div class="adminBtn">
+          <a href="../">
+              <input type="button" value="戻る">
+          </a>
+          </div>
+          <!-- <p class="centering">
+            <a href="../" class="btn btn-secondary">戻る</a>
+            <a href="add.php" class="btn btn-primary">
+              新規登録
+            </a>
+          </p> -->
         </div>
-      </main>
+      
     <?php
   } catch (PDOException $e) {
     echo 'エラー発生:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '<br>';
     exit;
   }
     ?>
+      </article>
+    </main>
     <footer class="footer">
       <div class="ft">
         <ul class="ft__ul">

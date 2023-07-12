@@ -52,10 +52,12 @@ try {
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="admin_main">
+       <article id="admin">
         <div class="container-narrow">
           <?php if (!empty($orders)) : ?>
-            <table class="admin-table ta_c">
+            <!-- <table class="admin-table ta_c"> -->
+            <table class="admin_tb">
               <thead>
                 <tr>
                   <th>注文番号</th>
@@ -73,8 +75,14 @@ try {
                     <td><?php echo $order['id']; ?></td>
                     <td><?php echo h($order['name']); ?></td>
                     <td><?php echo $order_date; ?></td>
-                    <td>
-                      <p class="centering"><a class="btn btn-menu" href="detail.php?id=<?php echo $order['id'] ?>">詳細</a></p>
+                    <td class="adminOperation">
+                      <!-- <p class="centering"> -->
+                      <div class="adminBtn">
+                        <a href="detail.php?id=<?php echo $order['id'] ?>">
+                        <input type="submit" value="詳細">
+                      </a>
+                      </div>
+                    <!-- </p> -->
                     </td>
                   </tr>
                 <?php endforeach; ?>
@@ -83,15 +91,24 @@ try {
           <?php else : ?>
             <p class="centering">受注情報がありません。</p>
           <?php endif; ?>
-          <p class="centering"><a class="btn btn-secondary" href="../">戻る</a></p>
+          <!-- <p class="centering">
+            <a class="btn btn-secondary" href="../">戻る</a>
+          </p> -->
+          <div class="adminBtn">
+          <a href="../">
+              <input type="button" value="戻る">
+          </a>
+          </div>
         </div>
-      </main>
+      
     <?php
   } catch (PDOException $e) {
     echo 'エラー発生:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '<br>';
     exit;
   }
     ?>
+    </article>
+    </main>
     <footer class="footer">
       <div class="ft">
         <ul class="ft__ul">

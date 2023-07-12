@@ -47,7 +47,8 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
 				</ul>
 			</nav>
 		</header>
-		<main>
+		<main class="admin_main">
+		<article id="admin">
 			<?php
 			try {
 				$db = getDB($dsn, $usr, $passwd);
@@ -71,7 +72,8 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
 					</p>
 					<?php if (!empty($product)) : ?>
 						<form action="edit_done.php" method="post" enctype="multipart/form-data">
-							<table class="admin-table">
+							<!-- <table class="admin-table"> -->
+							<table class="admin_tb">
 								<tr>
 									<th>商品ID</th>
 									<td>
@@ -112,15 +114,19 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
 						<?php else : ?>
 							<p class="centering">商品がありません。</p>
 						<?php endif; ?>
-						<p class="centering">
-							<a href="./" class="btn btn-secondary">戻る</a>
+						<div class="adminBtn">
 							<?php if (!empty($product)) : ?>
-								<input type="submit" class="btn btn-menu" value="編集する">
+							<input type="submit" value="編集する">
 							<?php endif; ?>
-						</p>
+                            <input type="button" value="戻る" onclick="history.back()">
+						</div>
+                    	
+							
+							</div>
 						</form>
 
 				</div>
+		</article>
 		</main>
 	<?php
 			} catch (PDOException $e) {

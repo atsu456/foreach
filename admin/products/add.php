@@ -68,10 +68,12 @@ require_once '../../func/functions.php';
               <td><textarea name="description" id="description"></textarea></td>
             </tr>
           </table>
-          <p class="centering">
-            <button class="btn btn-secondary" type="button" onclick="history.back();">戻る</button>
+          
+          <div class="adminBtn">
+            <input type="button" value="戻る" onclick="history.back()">
+          </div>
             <input class="btn btn-primary" type="submit" value="登録する">
-          </p>
+          
         </form>
       </div>
     </main>

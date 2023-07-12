@@ -48,7 +48,8 @@ require_once '../../func/functions.php';
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="admin_main">
+    <article id="admin">
       <?php
       try {
         $db = getDB($dsn, $usr, $passwd);
@@ -66,8 +67,9 @@ require_once '../../func/functions.php';
         $create_date = convert_date($detail[0]['created_on'], 'Y年n月d日 H:i:s');
         $update_date = convert_date($detail[0]['updated_on'], 'Y年n月d日 H:i:s');
       ?>
-        <div class="container-narrow">
-          <dl class="admin-info">
+        <!-- <div class="container-narrow">
+          <dl class="admin-info"> -->
+          <div class="admin">
             <dt>受注番号</dt>
             <dd>No.<?php echo $detail[0]['order_id']; ?></dd>
             <dt>注文日時</dt>
@@ -81,7 +83,8 @@ require_once '../../func/functions.php';
             <dt>お届け先</dt>
             <dd><?php echo ($detail[0]['address']); ?></dd>
           </dl>
-          <table class="admin-table admin-table-wide">
+          <!-- <table class="admin-table admin-table-wide"> -->
+          <table class="admin_tb">
             <thead>
               <tr>
                 <th>商品名</th>
@@ -112,15 +115,22 @@ require_once '../../func/functions.php';
               <td><?php echo "&yen;" . number_format($total); ?></td>
             </tfoot>
           </table>
-          <p class="centering"><a href="./" class="btn btn-secondary">戻る</a></p>
+          <div class="adminBtn">
+          <a href="../">
+              <input type="button" value="戻る">
+          </a>
+          </div>
         </div>
-    </main>
+    
   <?php
       } catch (PDOException $e) {
         echo 'エラー発生:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '<br>';
         exit;
       }
   ?>
+  </div>
+    </article>
+  </main>
   <footer class="footer">
     <div class="ft">
       <ul class="ft__ul">

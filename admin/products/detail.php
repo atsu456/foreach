@@ -46,7 +46,8 @@ require_once '../../func/functions.php';
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="admin_main">
+            <article id="admin">
       <?php
       try {
         $db = getDB($dsn, $usr, $passwd);
@@ -62,7 +63,8 @@ require_once '../../func/functions.php';
             $create_date = convert_date($product['created_on'], 'Y年n月d日 H:i:s');
             $update_date = convert_date($product['updated_on'], 'Y年n月d日 H:i:s');
           ?>
-            <table class="admin-table">
+            <!-- <table class="admin-table"> -->
+            <table class="admin_tb">
               <tr>
                 <th>商品ID</th>
                 <td><?php echo $product['id']; ?></td>
@@ -103,14 +105,15 @@ require_once '../../func/functions.php';
           <?php else : ?>
             <p class="centering">商品がありません。</p>
           <?php endif; ?>
-          <p class="centering">
-            <a href="./" class="btn btn-secondary">戻る</a>
+          <div class="adminBtn">
             <?php if (!empty($product)) : ?>
-              <a class="btn btn-menu" href="edit.php?id=<?php echo $id ?>">編集</a>
+              <a href="edit.php?id=<?php echo $id ?>"><input type="button" value="編集"></a>
             <?php endif; ?>
-          </p>
+            <input type="button" value="戻る" onclick="history.back()">
+          </div>
 
         </div>
+            </article>
     </main>
   <?php
       } catch (PDOException $e) {
