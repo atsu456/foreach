@@ -50,7 +50,7 @@ require_once 'foreach_config.php';
         </header>
         <main class="admin_main">
             <article id="admin">
-                <h1>管理：ユーザ</h1>
+                <h1>管理：ユーザー</h1>
                 <p class="new"><a href="add.php">新規登録</a></p>
                 <?php
                 try {
@@ -63,7 +63,7 @@ require_once 'foreach_config.php';
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>ユーザ名</th>
+                                <th>ユーザー名</th>
                                 <th>操作</th>
                             </tr>
                         </thead>

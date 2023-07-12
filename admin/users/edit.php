@@ -53,7 +53,7 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
         </header>
         <main class="admin_main">
             <article id="admin">
-                <h1>編集：ユーザ</h1>
+                <h1>編集：ユーザー</h1>
                 <?php
                 try {
                     $db = getDb($dsn, $usr, $passwd);

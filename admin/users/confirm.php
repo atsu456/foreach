@@ -54,10 +54,10 @@ $password = e($_POST['password']);
         </header>
         <main class="admin_main">
             <article id="admin">
-                <h1>新規登録：ユーザ-確認-</h1>
+                <h1>新規登録：ユーザー-確認-</h1>
                 <form action="add_done.php" method="post" class="admin">
                     <dl>
-                        <dt>ユーザ名</dt>
+                        <dt>ユーザー名</dt>
                         <dd><?= $name ?><input type="hidden" name="name" value="<?= $name ?>"></dd>
                         <dt>メールアドレス</dt>
                         <dd><?= $email ?><input type="hidden" name="email" value="<?= $email ?>"></dd>

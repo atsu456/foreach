@@ -52,7 +52,7 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
 		</header>
 		<main class="admin_main">
 			<article id="admin">
-				<h1>削除：ユーザ</h1>
+				<h1>削除：ユーザ－</h1>
 				<?php
 				try {
 					$db = getDb($dsn, $usr, $passwd);
@@ -76,7 +76,7 @@ $id = (int)$_POST['id']; //一覧画面から送信されたIDを受け取る
 						<div class="adminBtn">
 								<input type="hidden" name="id" value="<?= $result['id'] ?>">
 								<input type="submit" value="削除する">
-								<input type="button" value="戻る" onclick="history.back()">
+								<a href="../"><input type="button" value="戻る"></a>
 						</div>
 						</form>
 					</div>

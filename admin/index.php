@@ -52,7 +52,7 @@ require_once '../func/func.php';
                 <h1>管理メニュー</h1>
                 <p class="loginName">ようこそ<?= ($_SESSION['login_name']) ?>さん</p>
                 <ul>
-                    <li><a href="users/">管理：ユーザ</a></li>
+                    <li><a href="users/">管理：ユーザー</a></li>
                     <li><a href="contact/">管理：お問い合わせ</a></li>
                     <li><a href="types/">管理：お問い合わせ種類</a></li>
                     <li><a href="news/">管理：ニュース</a></li>

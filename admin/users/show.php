@@ -54,7 +54,7 @@ $id = (int)$_POST['id'];
         </header>
         <main class="admin_main">
             <article id="admin">
-                <h1>詳細：ユーザ</h1>
+                <h1>詳細：ユーザー</h1>
                 <?php
                 try {
                     $db = getDb($dsn, $usr, $passwd);

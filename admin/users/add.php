@@ -50,10 +50,10 @@ require_once 'foreach_config.php';
         </header>
         <main class="admin_main">
             <article id="admin">
-                <h1>新規登録：ユーザ</h1>
+                <h1>新規登録：ユーザー</h1>
                 <form action="confirm.php" method="post" class="admin">
                     <dl>
-                        <dt><label for="name">ユーザ名</label></dt>
+                        <dt><label for="name">ユーザー名</label></dt>
                         <dd><input type="text" name="name" id="name" required></dd>
                         <dt><label for="email">メールアドレス</label></dt>
                         <dd><input type="email" name="email" id="email" required></dd>
