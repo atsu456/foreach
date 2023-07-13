@@ -51,7 +51,7 @@ require_once 'foreach_config.php';
             $result = $stt->fetchAll(PDO::FETCH_ASSOC);
           ?>
             <div id="slideshow">
-              <img src="image/slideshow6.jpg" class="active">
+              <img src="image/slideshow007.jpg" class="active">
               <?php foreach ($result as $row) : ?>
                 <img src="<?= 'image/' . $row['image'] ?>" alt="products_image">
                 </a>

@@ -252,8 +252,7 @@ a {
 }
 
 .g-nav__item a:hover {
-  background-color: var(--main-color);
-  color: #BFAF8E;
+  color: #9d9d9d;
 }
 
 .nav {
@@ -456,7 +455,7 @@ section {
 .mv__copy {
   font-size: 20px;
   font-weight: normal;
-  letter-spacing: 1.0em;
+  letter-spacing: 1.08em;
 }
 
 .mv__lead {
@@ -494,7 +493,7 @@ section {
 }
 
 a.btn {
-  color: var(--white);
+  color: var(--black);
   background-color: #898989;
 }
 
@@ -734,7 +733,7 @@ news detail
 reserve
 ----------------------------------*/
 #reserve #mv {
-  background-image: url(../image/log-home.jpg);
+  background-image: url(../image/log-home1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -912,7 +911,7 @@ input[type="email"],
 
 .calendar th {
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: var(--accent-color);
   color: white;
 }
 
@@ -964,7 +963,7 @@ facility
 ----------------------------------*/
 
 #facility #mv {
-  background-image: url(../image/tent1.jpg);
+  background-image: url(../image/tent2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1348,7 +1347,7 @@ shop
 #shop .btn-item {
   background-color: #898989;
   border: none;
-  color: var(--white);
+  color: var(--black);
   padding-block: 0.5rem;
   display: block;
   text-align: center;
@@ -1441,7 +1440,7 @@ accsess
 ----------------------------------*/
 
 #access #mv {
-  background-image: url(../image/access.jpg);
+  background-image: url(../image/access1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1636,6 +1635,9 @@ admin
   color: var(--black);
   background-color: var(--white);
   border-radius: 10px;
+}
+#admin a{
+  color: #000;
 }
 
 .admin dt,

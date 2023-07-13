@@ -34,6 +34,7 @@ require_once 'func/func.php';
                 </section>
                 <section id="news01" class="contents">
                     <div class="page_description">
+                        <div class="air-box"></div>
                         <h2 class="title-style">
                             01
                             <p class="title-border-right">NEWS</p>
