@@ -77,7 +77,8 @@
 
 :where(p, h1, h2, h3, h4, h5, h6) {
   overflow-wrap: break-word;
-}
+  letter-spacing: 0.3em;
+} 
 
 :where(h1, h2, h3) {
   line-height: calc(1em + 0.5rem);
@@ -111,14 +112,14 @@
 :root {
   /* color */
   --white: #FFFFFF;
-  --grey-10: #eeeeee;
+  --grey-10: #283339;
   --grey-25: #aaaaaa;
   --grey-50: #707070;
   --grey-75: #444444;
   --black: #222222;
-  --main-color: #567167;
+  --main-color: #262d31;
   --base-color: #F7F7ED;
-  --accent-color: #514C49;
+  --accent-color: #BFAF8E;
   --accent-color-r: #db5139;
   --accent-color-g: #59CC0D;
   /* typography */
@@ -155,6 +156,8 @@ body {
   font-style: normal;
   color: var(--white);
   background-color: var(--main-color);
+  letter-spacing: 0.2em;
+
 }
 
 body,
@@ -180,7 +183,7 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: #BFAF8E;
 }
 
 /* 全ページ共通 -----------------------------------------------------------*/
@@ -201,12 +204,14 @@ a {
 .header {
   display: flex;
   width: 100%;
-  background-color: var(--white);
+  background-color: #080e17;
   padding: 0 100px;
   position: sticky;
   top: 0;
   z-index: 10;
   justify-content: space-between;
+  letter-spacing: 0.2em;
+
 }
 
 .t-nav {
@@ -230,7 +235,7 @@ a {
 ----------------------------------*/
 
 #g-nav {
-  width: 300px;
+  width: 350px;
   margin-right: 30px;
 }
 
@@ -242,13 +247,13 @@ a {
 .g-nav__item a {
   display: block;
   text-align: center;
-  color: var(--black);
+  color: #BFAF8E;
   font-size: clamp(0.75rem, 0.43rem + 0.67vw, 1rem);
 }
 
 .g-nav__item a:hover {
-  background-color: var(--white);
-  color: var(--main-color);
+  background-color: var(--main-color);
+  color: #BFAF8E;
 }
 
 .nav {
@@ -277,7 +282,7 @@ hamburger-menu
   display: inline-block;
   width: 44%;
   height: 2px;
-  background: #242424;
+  background: #BFAF8E;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -338,7 +343,7 @@ hamburger-menu
 }
 
 .navigation__link {
-  color: #fff;
+  color: #BFAF8E;
   font-weight: 700;
   text-decoration: none;
   display: block;
@@ -359,9 +364,9 @@ hamburger-menu
 .footer {
   height: 450px;
   padding: 20px 80px;
-  background-color: var(--white);
+  background-color: #080e17;
   font-size: clamp(0.75rem, 0.43rem + 0.67vw, 1rem);
-  color: var(--black);
+  color: #BFAF8E;
 }
 
 .ft {
@@ -451,6 +456,7 @@ section {
 .mv__copy {
   font-size: 20px;
   font-weight: normal;
+  letter-spacing: 1.0em;
 }
 
 .mv__lead {
@@ -591,7 +597,7 @@ facility　access　共通
 
 .slick-prev:before,
 .slick-next:before {
-  color: black;
+  color: white;
 }
 
 .slick-slide {
@@ -616,7 +622,7 @@ facility　access　共通
 #shop #slideshow {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - var(--header-height));
   object-fit: cover;
 }
 
@@ -625,7 +631,7 @@ facility　access　共通
   z-index: 3;
   opacity: 0.0;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - var(--header-height));
   object-fit: cover;
 }
 
@@ -633,14 +639,14 @@ facility　access　共通
   z-index: 5;
   opacity: 1.0;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - var(--header-height));
 
 }
 
 #shop #slideshow img.last-active {
   z-index: 4;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - var(--header-height));
 
 }
 
@@ -650,7 +656,7 @@ facility　access　共通
 news
 ----------------------------------*/
 #news #mv {
-  background-image: url(../image/news.jpg);
+  background-image: url(../image/news1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -674,6 +680,7 @@ news
 
 #news .contents {
   margin: 0 auto 50px;
+  max-width: 1500px;
 }
 
 #news #recently {
@@ -681,16 +688,18 @@ news
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 20px;
+
 }
 
 .news_description .description {
   font-size: 1rem;
   margin-top: 60px;
-  padding: 0 20px;
+  padding: 0;
+
 }
 
 #news .calendar-section {
-  margin: 20px;
+  margin: 0px;
 }
 
 /*--------------------------------
@@ -701,12 +710,17 @@ news detail
   font-weight: bold;
   margin-top: 10px;
   text-align: left;
+  letter-spacing: 0.2em;
 }
 
 .news_detail h2 {
   margin-top: 10px;
   font-size: 50px;
   font-weight: bold;
+  text-align: left;
+  margin-left: 0;
+  font-family: system-ui, sans-serif;
+  font-weight: lighter;
 }
 
 #news .news_detail {
@@ -1180,6 +1194,7 @@ shop
 #shop .item__name {
   font-weight: bold;
   font-size: var(--heading2);
+  color: var(--base-color);
 }
 
 #shop .item__price {
@@ -1189,6 +1204,7 @@ shop
 
 #shop .item-detail {
   margin-inline: auto;
+  margin-top: 3rem;
 }
 
 #shop .item-detail>*+* {
