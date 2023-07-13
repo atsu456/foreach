@@ -358,7 +358,7 @@ hamburger-menu
 
 .footer {
   height: 450px;
-  padding: 20px 80px;
+  padding: 20px clamp(1.25rem, -21.158rem + 46.74vw, 18.75rem);
   background-color: var(--white);
   font-size: clamp(0.75rem, 0.43rem + 0.67vw, 1rem);
   color: var(--black);
@@ -370,8 +370,10 @@ hamburger-menu
 }
 
 .ft_links {
+  width: 600px;
   display: flex;
-  margin: 0 auto;
+  justify-content: end;
+  justify-content: space-between;
 }
 
 .ft_links_li {
@@ -1689,6 +1691,11 @@ admin
 
   .ft {
     flex-direction: column;
+  }
+
+  .ft_links {
+    width: 100%;
+    justify-content: space-around;
   }
 
   .ft_snsLinks_ul {
