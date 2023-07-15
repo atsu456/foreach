@@ -75,7 +75,7 @@ $id = (int)$_POST['id'];
                             <dt>テキスト</dt>
                             <dd><?= $result['article'] ?></dd>
                             <dt>image</dt>
-                            <dd><?= $result['news_image'] ?></dd>
+                            <dd><img src= "<?= '../../image/' . $result['news_image'] ?>" alt=""></dd>
                         </dl>
                         <div class="adminBtn">
                         <input type="button" value="戻る" onclick="history.back()">
